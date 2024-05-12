@@ -1,0 +1,21 @@
+по этому случаю|on this occasion| empty|0|0
+источник|source| empty|0|0
+частота|frequency| empty|0|0
+переменный|alternating| empty|0|0
+корень|root|empty|0|0
+мощность|power|empty|0|0
+увеличится|will increase|empty|0|0
+умножить|multiply|empty|0|0
+искра|spark|empty|0|0
+точки зрения|points of view|empty|0|0
+расширенные|extended|empty|0|0
+сужение|narrowing|empty|0|0
+зрачки|pupils|empty|0|0
+охота|hunting|empty|0|0
+удовлетворить|to satisfy|empty|0|0
+предмет|item,subject|empty|0|0
+сузится|will narrow|empty|0|0
+добыча|production|empty|0|0
+позволяет|allows,enables|empty|0|0
+испытовает|is experiencing|empty|0|0
+усы|whisker|empty|0|0
