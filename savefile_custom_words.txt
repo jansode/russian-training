@@ -54,3 +54,4 @@
 появляться|appear|empty|0|0
 брать|take|empty|0|0
 берем|take|empty|0|0
+иголки|needles|empty|0|0

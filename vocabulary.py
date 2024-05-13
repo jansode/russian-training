@@ -2,14 +2,9 @@ import os
 import sys
 import codecs
 import random
+import settings
 from numpy.random import choice
 from pathlib import Path
-
-DEBUG_FUNCTION_CALL = False
-
-MOST_COMMON_WORDS = "most_common_words.csv"
-SHOW_TIMES_ENCOUNTERED = True
-SHOW_TIMES_CORRECT = True
 
 sys.stdout = codecs.getwriter("utf-8")(sys.stdout.detach())
 
@@ -32,7 +27,7 @@ class Word:
 
 # Used in weighted choices function when choosing word to guess.
 def get_wordlist_correct_rates():
-	if DEBUG_FUNCTION_CALL:
+	if settings.DEBUG_FUNCTION_CALL:
 		print("CALL: get_wordlist_correct_rates")
 	return_list = []
 	for word in wordlist:
@@ -49,7 +44,7 @@ def get_wordlist_correct_rates():
 	return normalized_weights
 
 def custom_split(string,delimeter,ignore_inside_char):
-	if DEBUG_FUNCTION_CALL:
+	if settings.DEBUG_FUNCTION_CALL:
 		print("CALL: custom_split")
 	output_list = []
 	inside_safe_zone = False
@@ -69,12 +64,12 @@ def custom_split(string,delimeter,ignore_inside_char):
 	return output_list
 
 def save_file_exists(wordlist):
-	if DEBUG_FUNCTION_CALL:
+	if settings.DEBUG_FUNCTION_CALL:
 		print("CALL: save_file_exists")
 	return Path(os.path.dirname(os.path.realpath(__file__)) + '\\' + "savefile_"+wordlist.split('.')[0]+".txt").is_file()
 
 def save_words(word_list_file):
-	if DEBUG_FUNCTION_CALL:
+	if settings.DEBUG_FUNCTION_CALL:
 		print("CALL: save_words")
 	with open('savefile_'+word_list_file.split(".")[0]+'.txt', 'wb') as f:
 		for word in wordlist:
@@ -82,21 +77,22 @@ def save_words(word_list_file):
 			f.write(to_write.encode('utf8'))
 		f.close()
 
-def load_save_file(word_list):
-	if DEBUG_FUNCTION_CALL:
+def load_save_file(savefile):
+	if settings.DEBUG_FUNCTION_CALL:
 		print("CALL: load_save_file")
-	with codecs.open('savefile_'+word_list.split(".")[0]+'.txt','r','utf-8') as f:
+	with codecs.open('savefile_'+savefile.split(".")[0]+'.txt','r','utf-8') as f:
 		lines = f.readlines()
 
 		for line in lines:
 			split_line = line.split('|')
-			english_words = split_line[1].split(",")
-			for word in english_words:
-				english_word_set.add(word.strip())
-			wordlist.append(Word(split_line[0],english_words,split_line[2],int(split_line[3]), int(split_line[4])))
+			if len(split_line) > 1:
+				english_words = split_line[1].split(",")
+				for word in english_words:
+					english_word_set.add(word.strip())
+				wordlist.append(Word(split_line[0],english_words,split_line[2],int(split_line[3]), int(split_line[4])))
 
 def create_save_file(word_list):
-	if DEBUG_FUNCTION_CALL:
+	if settings.DEBUG_FUNCTION_CALL:
 		print("CALL: create_save_file")
 	with codecs.open(word_list,'r','utf-8') as f:
 		lines = f.readlines()
@@ -117,7 +113,7 @@ def create_save_file(word_list):
 	save_words(word_list)
 	
 def quiz_word(word_list, suggestions):
-	if DEBUG_FUNCTION_CALL:
+	if settings.DEBUG_FUNCTION_CALL:
 		print("CALL: quiz_word")
 
     # Choose words that have lower correct rate with higher probability.
@@ -158,7 +154,7 @@ def quiz_word(word_list, suggestions):
 	return (translate_this.in_russian, correct_index)
 
 def guess_word(wordlist,russian,english):
-	if DEBUG_FUNCTION_CALL:
+	if settings.DEBUG_FUNCTION_CALL:
 		print("CALL: guess_word")
 
 	for word_object in wordlist:
@@ -171,21 +167,21 @@ def guess_word(wordlist,russian,english):
 	return False
 
 def get_word_object(russian):
-	if DEBUG_FUNCTION_CALL:
+	if settings.DEBUG_FUNCTION_CALL:
 		print("CALL: get_word_object")
 	for word_object in wordlist:
 		if word_object.in_russian == russian:
 			return word_object
 
 def translate(wordlist,russian):
-	if DEBUG_FUNCTION_CALL:
+	if settings.DEBUG_FUNCTION_CALL:
 		print("CALL: translate")
 	for word_object in wordlist:
 		if word_object.in_russian == russian:
 			print(word_object.translations)
 
 def session(word_list):
-	if DEBUG_FUNCTION_CALL:
+	if settings.DEBUG_FUNCTION_CALL:
 		print("CALL: session")
 	while(True):
 		(to_guess, correct_index) = quiz_word(word_list,3)
@@ -201,9 +197,9 @@ def session(word_list):
 				success_rate = 0
 				
 			print("Correct! Progress with this word (success rate): "+success_rate)
-			if SHOW_TIMES_ENCOUNTERED:
+			if settings.SHOW_TIMES_ENCOUNTERED:
 				print("Times encountered: "+str(word.times_encountered))
-			if SHOW_TIMES_CORRECT:
+			if settings.SHOW_TIMES_CORRECT:
 				print("Times correct: "+str(word.times_correct))
 			print("\n")
 		else:
@@ -215,17 +211,45 @@ def session(word_list):
 			print("Correct translations: ")
 			translate(wordlist,word.in_russian)
 
-def init_word_list_and_savefile(wordlist):
-	if DEBUG_FUNCTION_CALL:
+def sync_save_file_with_new_words(wordfile):
+	if settings.DEBUG_FUNCTION_CALL:
+		print("CALL: sync_save_file_with_new_words")
+			
+	wordfile_words = []
+	with codecs.open(wordfile,'r','utf-8') as f:
+		lines = f.readlines()
+
+		for line in lines:
+			split_line = custom_split(line,',','"')
+			if len(split_line) > 1:
+				english_words = split_line[1].split(",")
+				wordfile_words.append(Word(split_line[0],english_words,split_line[2].replace('\n','')))
+	
+	words_added = 0
+	for word in wordfile_words:
+		
+		if not any(x.in_russian == word.in_russian for x in wordlist):
+			words_added += 1		
+			for w in word.translations:
+				english_word_set.add(w.strip())		
+			
+			wordlist.append(word)
+	
+	if words_added > 0:
+		print("Wordfile and savefile synced. "+str(words_added)+" new words added.")
+	
+def init_word_list_and_savefile(wordfile):
+	if settings.DEBUG_FUNCTION_CALL:
 		print("CALL: init_word_list_and_savefile")
-	if save_file_exists(wordlist):
-		load_save_file(wordlist)
+	if save_file_exists(wordfile):
+		load_save_file(wordfile)
+		sync_save_file_with_new_words(wordfile)
 	else:
-		create_save_file(wordlist)
+		create_save_file(wordfile)
 
 def main():
 	if len(sys.argv) > 1:
-		wordlist = MOST_COMMON_WORDS
+		wordlist = settings.MOST_COMMON_WORDS
 		
 		if sys.argv[1] == 'session':	
 			if len(sys.argv) > 2:
