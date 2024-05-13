@@ -11,7 +11,7 @@ class Word:
 		self.translations = translations
 		self.function = function
 		self.times_encountered = times_encountered
-		self.times_correct = 0
+		self.times_correct = times_correct
 
 	def __str__(self):
 		return self.in_russian + " ("+str(self.translations)+")\n\tfunction: " \
@@ -87,10 +87,12 @@ def quiz_word(nr_suggestions):
 	print("translate:"+translate_this.in_russian)
 	print("suggestions:", end='')
 	
+	index = 1
 	for word in false_words[:-1]:
-		print(word.lstrip(), end='|')
+		print(" ("+str(index)+") "+word.lstrip(), end=' |')
+		index+=1
 
-	print(false_words[-1].lstrip())
+	print(" ("+str(index)+") "+false_words[-1].lstrip())
 
     # Get index of correct answer.
 	correct_index = 0
@@ -141,4 +143,14 @@ def update_wordlist_data(word):
 def list_words():
 	for word in wordlist:
 		print(word)
+		
+def list_problem_words():
+	for word in wordlist:
+		correct_rate = word.get_correct_rate()
+		if (correct_rate < settings.PROBLEM_WORD_THRESHOLD) and (correct_rate != 0):
+			print(word)
+
+def word_frequency_from_text(argv[2]):
+	pass
+
 

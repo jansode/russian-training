@@ -2,6 +2,7 @@ import settings
 from word_functions import *
 from file_handling import *
 
+# returns a tuple of booleans. (right answer check after this function?,get new question after?)
 def handle_commands(command_string):
 	if settings.DEBUG_FUNCTION_CALL:
 		print("CALL: handle_commands")
@@ -14,12 +15,16 @@ def handle_commands(command_string):
 	elif command_string == "dictionary":
 		list_words()
 		return (False,True)
+	elif command_string == "problem_words":
+		list_problem_words()
+		return (False,True)
 	elif command_string == "help":
 		print("exit: Exits the program.")
 		print("dictionary: Shows a list of the words the program knows.")
 		print("set: Modify program settings.")
 		print("\tdebug_function (true/false): Turn function call debug info on or off.")
 		print("wordfile [wordfile_name]: Change word file.")
+		print("problem_words: List words that have a low score.")
 		print("help: Shows this text")
 		print("")
 		return (False,True)
