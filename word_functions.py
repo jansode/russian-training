@@ -1,6 +1,11 @@
 import settings
 import random
+import re
+import string
+
 from numpy.random import choice
+
+import file_handling
 
 wordlist = []
 english_word_set = set()
@@ -150,7 +155,44 @@ def list_problem_words():
 		if (correct_rate < settings.PROBLEM_WORD_THRESHOLD) and (correct_rate != 0):
 			print(word)
 
-def word_frequency_from_text(argv[2]):
-	pass
+def word_frequency_from_text(filename,reverse=False):
+	if settings.DEBUG_FUNCTION_CALL:
+		print("CALL: word_frequency_from_text")
+		
+	word_occurences = {}
+	
+	if file_handling.file_exists(filename):
+		text = file_handling.get_file_text_as_string(filename)
+		
+		for word in text.split(' '):
+			plain_word = word.lower().replace('\n','').replace('\t','').replace('\r','')
+			
+			translator = plain_word.maketrans('','',string.punctuation)
+			plain_word=plain_word.translate(translator)
+			if len(plain_word) < 5:
+				continue
+			
+			if plain_word not in word_occurences.keys():
+				word_occurences[plain_word] = 1
+			else:
+				word_occurences[plain_word] = word_occurences[plain_word] + 1
+		
+		word_occurences = dict(sorted(word_occurences.items(), key=lambda item: item[1],reverse=reverse))
+		print(len(word_occurences))
+		
+		start_print = 0
+		nr_print = 30
+		index = 0
+		for word in word_occurences:
+			if index > start_print:
+				print(word,end=' ')
+				print(word_occurences[word])
+			index+=1
+			
+			if index == start_print+nr_print:
+				break
+			
+	else:
+		print("Error: File does not exist.")
 
 

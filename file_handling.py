@@ -102,4 +102,19 @@ def sync_save_file_with_new_words():
 	
 	if words_added > 0:
 		print("Wordfile and wordlist_file synced. "+str(words_added)+" new words added.")
+
+def get_file_text_as_string(filename):
+	if settings.DEBUG_FUNCTION_CALL:
+		print("CALL: get_file_text_as_string")
+	
+	output_text = ""
+	with codecs.open(filename,'r','utf-8') as f:
+		lines = f.readlines()
+
+		for line in lines:
+			output_text += line
+	
+	return output_text
+				
+	
 	
