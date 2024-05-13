@@ -19,3 +19,13 @@
 позволяет|allows,enables|empty|0|0
 испытовает|is experiencing|empty|0|0
 усы|whisker|empty|0|0
+помешивать|stir|empty|0|0
+жидкость|liquid|empty|0|0
+стекло|glass|empty|0|0
+чистый|clean|empty|0|0
+муравей|ant|empty|0|0
+смесь|mixture|empty|0|0
+среда обитания|habitat|empty|0|0
+поверхность|surface|empty|0|0
+заблудиться|get lost|empty|0|0
+отрасли|industry|empty|0|0

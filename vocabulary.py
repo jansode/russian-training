@@ -91,23 +91,21 @@ def create_save_file(word_list):
 
 		for line in lines:
 			split_line = custom_split(line,',','"')
-			english_words = split_line[1].split(",")
-			for word in english_words:
-				english_word_set.add(word.strip())
-				
-			for i in range(len(english_words)):
-				english_words[i] = english_words[i].strip()
+			
+			if len(split_line) > 1:	
+				english_words = split_line[1].split(",")
+				for word in english_words:
+					english_word_set.add(word.strip())
+					
+				for i in range(len(english_words)):
+					english_words[i] = english_words[i].strip()
 
-			wordlist.append(Word(split_line[0],english_words,split_line[2].replace('\n','')))
+				wordlist.append(Word(split_line[0],english_words,split_line[2].replace('\n','')))
 	
 	save_words(word_list)
 	
 def quiz_word(word_list, suggestions):
 
-	print("quiz_word -> suggestions: "+str(suggestions))
-	
-	
-	
     # Choose words that have lower correct rate with higher probability.
 	correct_rates_list = get_wordlist_correct_rates()
 	translate_this = choice(wordlist, len(correct_rates_list), p=correct_rates_list)[0]
@@ -116,14 +114,7 @@ def quiz_word(word_list, suggestions):
 	for word in translate_this.translations:
 		copy_set.remove(word.strip())
 
-	'''
-	false_word_set = english_word_set.copy()
-	
-	for word in translate_this.translations:
-		false_word_set = false_word_set - set(word)
-	'''
 	false_words = random.sample(list(copy_set),suggestions-1)
-	print("False words:" +str(false_words))
 	
 	# It would be cool to see an infinite loop here. 
 	i = 0
