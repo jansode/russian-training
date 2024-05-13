@@ -10,7 +10,7 @@ def handle_commands(command_string):
 		return (False,False)
 	elif command_string == "exit":
 		save_words()
-		exit(1)
+		exit(0)
 	elif command_string == "dictionary":
 		list_words()
 		return (False,True)
@@ -27,7 +27,7 @@ def handle_commands(command_string):
 	splitted = command_string.split(" ")
 	if splitted[0] == "set":
 		if len(splitted) != 3:
-			print("Invalid command or command_string...")
+			print(settings.INVALID_COMMAND_TEXT)
 			return (False,False)
 		
 		if splitted[1] == "debug_function":
@@ -39,14 +39,14 @@ def handle_commands(command_string):
 				settings.DEBUG_FUNCTION_CALL = False
 				print("Function call debug info turned off.")
 			else:
-				print("Invalid command or command_string...")
+				print(settings.INVALID_COMMAND_TEXT)
 		else:
-			print("Invalid command or command_string...")
+			print(settings.INVALID_COMMAND_TEXT)
 
 		return (False,False)
 	elif splitted[0] == "wordfile":
 		if len(splitted) != 2:
-			print("Invalid command or command_string...")
+			print(settings.INVALID_COMMAND_TEXT)
 			return (False,False)
 		
 		if file_exists(splitted[1]):
@@ -62,7 +62,7 @@ def handle_commands(command_string):
 			
 			return (False,False)
 		else:
-			print("Invalid command or command_string...")
+			print(settings.INVALID_COMMAND_TEXT)
 			print("The specified word file does not exist.")
 			return (False,False)
 	else:
@@ -74,12 +74,12 @@ def session():
 	
 	got_answer_from_previous = False
 	did_command_in_previous = False
-	(to_guess, correct_index) = quiz_word(3)
+	(to_guess, correct_index) = quiz_word(settings.NUMBER_OF_SUGGESTIONS)
 	
 	while(True):
 	
 		if got_answer_from_previous or did_command_in_previous:
-			(to_guess, correct_index) = quiz_word(3)
+			(to_guess, correct_index) = quiz_word(settings.NUMBER_OF_SUGGESTIONS)
 			
 		print(">>",end='')
 		guess = input() # Both number in list and word input works.
@@ -92,7 +92,7 @@ def session():
 		
 		guess_word_correct = guess_word(wordlist,to_guess,guess)
 		if not guess_word_correct and not guess.isnumeric():
-			print("Invalid command or guess...")
+			print(settings.INVALID_COMMAND_TEXT)
 			continue
 
 		if guess_word_correct or (int(guess) == correct_index):

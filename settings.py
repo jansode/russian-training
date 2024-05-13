@@ -4,3 +4,7 @@ MOST_COMMON_WORDS = "most_common_words.csv"
 WORDLIST_FILE = "custom_words.csv"
 SHOW_TIMES_ENCOUNTERED = True
 SHOW_TIMES_CORRECT = True
+
+INVALID_COMMAND_TEXT = "Invalid command..."
+
+NUMBER_OF_SUGGESTIONS = 5
