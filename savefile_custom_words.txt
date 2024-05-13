@@ -29,8 +29,8 @@
 поверхность|surface|empty|0|0
 заблудиться|get lost|empty|0|0
 отрасли|industry|empty|0|0
-напряжение|voltage|empty|0|0
-примерно|approximately|empty|0|0
+напряжение|voltage|empty|1|1
+примерно|approximately|empty|2|2
 питание|powered|empty|0|0
 передача|transmitting|empty|0|0
 провода|wires|empty|0|0
@@ -44,7 +44,7 @@
 зуб|tooth|empty|0|0
 дыхание|breath|empty|0|0
 справедливый|fair,just|empty|0|0
-трогать|touch|empty|0|0
+трогать|touch|empty|1|0
 тайна|secret|empty|0|0
 старушка|old lady|empty|0|0
 вредны|harmful|empty|0|0
@@ -54,4 +54,4 @@
 появляться|appear|empty|0|0
 брать|take|empty|0|0
 берем|take|empty|0|0
-иголки|needles|empty|0|0
+иголки|needles|empty|1|1

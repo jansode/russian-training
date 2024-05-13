@@ -1,5 +1,6 @@
-DEBUG_FUNCTION_CALL = True
+DEBUG_FUNCTION_CALL = False
 
 MOST_COMMON_WORDS = "most_common_words.csv"
+WORDLIST_FILE = "custom_words.csv"
 SHOW_TIMES_ENCOUNTERED = True
 SHOW_TIMES_CORRECT = True

@@ -12,18 +12,22 @@ wordlist = []
 english_word_set = set()
 
 class Word:
-    def __init__(self, russian, translations, function, times_encountered = 0, times_correct = 0):
-        self.in_russian = russian
-        self.translations = translations
-        self.function = function
-        self.times_encountered = times_encountered
-        self.times_correct = 0
+	def __init__(self, russian, translations, function, times_encountered = 0, times_correct = 0):
+		self.in_russian = russian
+		self.translations = translations
+		self.function = function
+		self.times_encountered = times_encountered
+		self.times_correct = 0
 
-    def get_correct_rate(self):
-        if self.times_encountered == 0:
-            return 0
+	def __str__(self):
+		return self.in_russian + " ("+str(self.translations)+")\n\tfunction: " \
+		+self.function+"\n\ttimes encountered: "+str(self.times_encountered)+"\n\ttimes correct: "+str(self.times_correct)+""
+		
+	def get_correct_rate(self):
+		if self.times_encountered == 0:
+			return 0
 
-        return self.times_correct / self.times_encountered
+		return self.times_correct / self.times_encountered
 
 # Used in weighted choices function when choosing word to guess.
 def get_wordlist_correct_rates():
@@ -63,24 +67,29 @@ def custom_split(string,delimeter,ignore_inside_char):
 		output_list.append(word)
 	return output_list
 
-def save_file_exists(wordlist):
+def save_file_exists():
 	if settings.DEBUG_FUNCTION_CALL:
 		print("CALL: save_file_exists")
-	return Path(os.path.dirname(os.path.realpath(__file__)) + '\\' + "savefile_"+wordlist.split('.')[0]+".txt").is_file()
+	return Path(os.path.dirname(os.path.realpath(__file__)) + '\\' + "wordlist_file_"+settings.WORDLIST_FILE.split('.')[0]+".txt").is_file()
+	
+def file_exists(file):
+	if settings.DEBUG_FUNCTION_CALL:
+		print("CALL: word_file_exists")
+	return Path(os.path.dirname(os.path.realpath(__file__)) + '\\' + file).is_file()
 
-def save_words(word_list_file):
+def save_words():
 	if settings.DEBUG_FUNCTION_CALL:
 		print("CALL: save_words")
-	with open('savefile_'+word_list_file.split(".")[0]+'.txt', 'wb') as f:
+	with open('savefile_'+settings.WORDLIST_FILE.split(".")[0]+'.txt', 'wb') as f:
 		for word in wordlist:
 			to_write = word.in_russian + "|" + ",".join(word.translations) + "|" + word.function + "|" + str(word.times_encountered) + '|' + str(word.times_correct) +"\n"
 			f.write(to_write.encode('utf8'))
 		f.close()
 
-def load_save_file(savefile):
+def load_save_file():
 	if settings.DEBUG_FUNCTION_CALL:
 		print("CALL: load_save_file")
-	with codecs.open('savefile_'+savefile.split(".")[0]+'.txt','r','utf-8') as f:
+	with codecs.open('wordlist_file_'+settings.WORDLIST_FILE.split(".")[0]+'.txt','r','utf-8') as f:
 		lines = f.readlines()
 
 		for line in lines:
@@ -91,10 +100,10 @@ def load_save_file(savefile):
 					english_word_set.add(word.strip())
 				wordlist.append(Word(split_line[0],english_words,split_line[2],int(split_line[3]), int(split_line[4])))
 
-def create_save_file(word_list):
+def create_save_file():
 	if settings.DEBUG_FUNCTION_CALL:
 		print("CALL: create_save_file")
-	with codecs.open(word_list,'r','utf-8') as f:
+	with codecs.open(settings.WORDLIST_FILE,'r','utf-8') as f:
 		lines = f.readlines()
 
 		for line in lines:
@@ -110,9 +119,9 @@ def create_save_file(word_list):
 
 				wordlist.append(Word(split_line[0],english_words,split_line[2].replace('\n','')))
 	
-	save_words(word_list)
+	save_words()
 	
-def quiz_word(word_list, suggestions):
+def quiz_word(nr_suggestions):
 	if settings.DEBUG_FUNCTION_CALL:
 		print("CALL: quiz_word")
 
@@ -124,7 +133,7 @@ def quiz_word(word_list, suggestions):
 	for word in translate_this.translations:
 		copy_set.remove(word.strip())
 
-	false_words = random.sample(list(copy_set),suggestions-1)
+	false_words = random.sample(list(copy_set),nr_suggestions-1)
 	
 	# It would be cool to see an infinite loop here. 
 	i = 0
@@ -141,7 +150,7 @@ def quiz_word(word_list, suggestions):
 	for word in false_words[:-1]:
 		print(word.lstrip(), end='|')
 
-	print(false_words[-1].lstrip(), end='')
+	print(false_words[-1].lstrip())
 
     # Get index of correct answer.
 	correct_index = 0
@@ -173,23 +182,120 @@ def get_word_object(russian):
 		if word_object.in_russian == russian:
 			return word_object
 
-def translate(wordlist,russian):
+def translate(russian):
 	if settings.DEBUG_FUNCTION_CALL:
 		print("CALL: translate")
 	for word_object in wordlist:
 		if word_object.in_russian == russian:
 			print(word_object.translations)
 
-def session(word_list):
+def update_wordlist_data(word):
+	if settings.DEBUG_FUNCTION_CALL:
+		print("CALL: update_wordlist_data")
+
+	for i in range(len(wordlist)):
+		if wordlist[i].in_russian == word.in_russian:
+			wordlist[i] = word
+			return
+
+def list_words():
+	for word in wordlist:
+		print(word)
+
+def handle_commands(command_string):
+	if settings.DEBUG_FUNCTION_CALL:
+		print("CALL: handle_commands")
+		
+	if command_string == "":
+		return (False,False)
+	elif command_string == "exit":
+		save_words()
+		exit(1)
+	elif command_string == "dictionary":
+		list_words()
+		return (False,True)
+	elif command_string == "help":
+		print("exit: Exits the program.")
+		print("dictionary: Shows a list of the words the program knows.")
+		print("set: Modify program settings.")
+		print("\tdebug_function (true/false): Turn function call debug info on or off.")
+		print("wordfile [wordfile_name]: Change word file.")
+		print("help: Shows this text")
+		print("")
+		return (False,True)
+		
+	splitted = command_string.split(" ")
+	if splitted[0] == "set":
+		if len(splitted) != 3:
+			print("Invalid command or command_string...")
+			return (False,False)
+		
+		if splitted[1] == "debug_function":
+			if splitted[2] == "true":
+				settings.DEBUG_FUNCTION_CALL = True
+				print("Function call debug info turned on.")
+
+			elif splitted[2] == "false":
+				settings.DEBUG_FUNCTION_CALL = False
+				print("Function call debug info turned off.")
+			else:
+				print("Invalid command or command_string...")
+		else:
+			print("Invalid command or command_string...")
+
+		return (False,False)
+	elif splitted[0] == "wordfile":
+		if len(splitted) != 2:
+			print("Invalid command or command_string...")
+			return (False,False)
+		
+		if file_exists(splitted[1]):
+			save_words()
+		
+			global wordlist
+			wordlist = []
+			
+			settings.WORDLIST_FILE = splitted[1]
+			
+			init_word_list_and_wordlist_file()
+			save_words()
+			
+			return (False,False)
+		else:
+			print("Invalid command or command_string...")
+			print("The specified word file does not exist.")
+			return (False,False)
+	else:
+		return (True,True)
+
+def session():
 	if settings.DEBUG_FUNCTION_CALL:
 		print("CALL: session")
+	
+	got_answer_from_previous = False
+	did_command_in_previous = False
+	(to_guess, correct_index) = quiz_word(3)
+	
 	while(True):
-		(to_guess, correct_index) = quiz_word(word_list,3)
-		print("\n>>",end='')
+	
+		if got_answer_from_previous or did_command_in_previous:
+			(to_guess, correct_index) = quiz_word(3)
+			
+		print(">>",end='')
 		guess = input() # Both number in list and word input works.
 		word = get_word_object(to_guess)
 
-		if guess_word(wordlist,to_guess,guess) or (int(guess) == correct_index):
+		(continue_further, did_command_in_previous) = handle_commands(guess.strip())
+		if not continue_further:
+			got_answer_from_previous = False
+			continue
+		
+		guess_word_correct = guess_word(wordlist,to_guess,guess)
+		if not guess_word_correct and not guess.isnumeric():
+			print("Invalid command or guess...")
+			continue
+
+		if guess_word_correct or (int(guess) == correct_index):
 			word.times_correct += 1
 		
 			success_rate = str(float(word.times_correct / word.times_encountered))
@@ -202,6 +308,8 @@ def session(word_list):
 			if settings.SHOW_TIMES_CORRECT:
 				print("Times correct: "+str(word.times_correct))
 			print("\n")
+			
+			update_wordlist_data(word)
 		else:
 			success_rate = str(float(word.times_correct / word.times_encountered))
 			if word.times_encountered == 0:
@@ -209,24 +317,27 @@ def session(word_list):
 				
 			print("Wrong! Progress with this word (success rate): "+success_rate + "\n")
 			print("Correct translations: ")
-			translate(wordlist,word.in_russian)
+			translate(word.in_russian)
+		
+		got_answer_from_previous = True
+		save_words()
 
-def sync_save_file_with_new_words(wordfile):
+def sync_save_file_with_new_words():
 	if settings.DEBUG_FUNCTION_CALL:
 		print("CALL: sync_save_file_with_new_words")
 			
-	wordfile_words = []
-	with codecs.open(wordfile,'r','utf-8') as f:
+	settings.WORDLIST_FILE_words = []
+	with codecs.open(settings.WORDLIST_FILE,'r','utf-8') as f:
 		lines = f.readlines()
 
 		for line in lines:
 			split_line = custom_split(line,',','"')
 			if len(split_line) > 1:
 				english_words = split_line[1].split(",")
-				wordfile_words.append(Word(split_line[0],english_words,split_line[2].replace('\n','')))
+				settings.WORDLIST_FILE_words.append(Word(split_line[0],english_words,split_line[2].replace('\n','')))
 	
 	words_added = 0
-	for word in wordfile_words:
+	for word in settings.WORDLIST_FILE_words:
 		
 		if not any(x.in_russian == word.in_russian for x in wordlist):
 			words_added += 1		
@@ -236,53 +347,61 @@ def sync_save_file_with_new_words(wordfile):
 			wordlist.append(word)
 	
 	if words_added > 0:
-		print("Wordfile and savefile synced. "+str(words_added)+" new words added.")
+		print("Wordfile and wordlist_file synced. "+str(words_added)+" new words added.")
 	
-def init_word_list_and_savefile(wordfile):
+def init_word_list_and_wordlist_file():
 	if settings.DEBUG_FUNCTION_CALL:
-		print("CALL: init_word_list_and_savefile")
-	if save_file_exists(wordfile):
-		load_save_file(wordfile)
-		sync_save_file_with_new_words(wordfile)
+		print("CALL: init_word_list_and_wordlist_file")
+	if save_file_exists():
+		load_save_file()
+		sync_save_file_with_new_words()
 	else:
-		create_save_file(wordfile)
+		create_save_file()
 
 def main():
 	if len(sys.argv) > 1:
-		wordlist = settings.MOST_COMMON_WORDS
+		settings.WORDLIST_FILE = settings.MOST_COMMON_WORDS
 		
 		if sys.argv[1] == 'session':	
 			if len(sys.argv) > 2:
-				wordlist = sys.argv[2]
+				wordlist_file = sys.argv[2]
+				if file_exists(wordlist_file):
+					settings.WORDLIST_FILE = wordlist_file
 			
-			init_word_list_and_savefile(wordlist)
-			save_words(wordlist)
+			init_word_list_and_wordlist_file()
+			save_words()
 
-			session(wordlist)
+			session()
 
 		else:
 			if sys.argv[1] == 'quiz':
 				if len(sys.argv[2]) > 2:
-					wordlist = sys.argv[2]
+					wordlist_file = sys.argv[2]
+					if file_exists(wordlist_file):
+						settings.WORDLIST_FILE = wordlist_file
 				
-				init_word_list_and_safefile(wordlist)
-				save_words(wordlist)
+				init_word_list_and_safefile()
+				save_words()
 
-				quiz_word(wordlist,3)		
+				quiz_word(3)		
 			elif sys.argv[1] == 'guess':
 				if len(sys.argv[2]) > 2:
-					wordlist = sys.argv[2]
+					wordlist_file = sys.argv[2]
+					if file_exists(wordlist_file):
+						settings.WORDLIST_FILE = wordlist_file
 				
-				init_word_list_and_safefile(wordlist)
-				save_words(wordlist)
-				print(guess_word(wordlist,sys.argv[2]," ".join(sys.argv[3:])))
+				init_word_list_and_safefile()
+				save_words()
+				print(guess_word(sys.argv[2]," ".join(sys.argv[3:])))
 			elif sys.argv[1] == 'answer':
 				if len(sys.argv[2]) > 2:
-					wordlist = sys.argv[2]
+					wordlist_file = sys.argv[2]
+					if file_exists(wordlist_file):
+						settings.WORDLIST_FILE = wordlist_file
 				
-				init_word_list_and_safefile(wordlist)
-				save_words(wordlist)
-				translate(wordlist,sys.argv[2])
+				init_word_list_and_safefile()
+				save_words()
+				translate(sys.argv[2])
 
 		#save_words(wordlist)
 
