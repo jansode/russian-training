@@ -1,58 +1,81 @@
-по этому случаю| on this occasion||0|0
-источник| source||0|0
-частота| frequency||1|0
-переменный| alternating||2|1
-корень| root||0|0
-мощность|power||0|0
-увеличится|will increase||3|0
-умножить|multiply||0|0
-искра|spark||0|0
-точки зрения|points of view||3|2
-расширенные|extended||0|0
-сужение|narrowing||0|0
-зрачки|pupils||1|0
-охота|hunting||0|0
-удовлетворить|to satisfy||0|0
-предмет|item,subject||0|0
-сузится|will narrow||0|0
-добыча|production||0|0
-позволяет|allows,enables||0|0
-испытовает|is experiencing||5|2
-усы|whisker||1|0
-помешивать|stir||1|0
-жидкость|liquid||1|0
-стекло|glass||3|1
-чистый|clean||1|0
-муравей|ant||0|0
-смесь|mixture||0|0
-среда обитания|habitat||0|0
-поверхность|surface||1|0
-заблудиться|get lost||0|0
-отрасли|industry||0|0
-напряжение|voltage||0|0
-примерно|approximately||0|0
-питание|powered||0|0
-передача|transmitting||0|0
-провода|wires||0|0
-сопротивление|resistance||1|0
-разделенный|divided||2|0
-маятник|pendulum||0|0
-основной|main||0|0
-достигает|reaches||1|0
-взволнованный|excited||1|0
-зубы|teeth||2|0
-зуб|tooth||0|0
-дыхание|breath||0|0
-справедливый|fair, just||0|0
-трогать|touch||0|0
-тайна|secret||0|0
-старушка|old lady||0|0
-вредны|harmful||0|0
-неожиданный|unexpected,sudden||0|0
-выпятив|sticking out||0|0
-упрямо|stubbornly||0|0
-появляться|appear||6|2
-брать|take||0|0
-берем|take||2|1
-иголки|needles||2|0
-молитва|prayer||4|1
+по этому случаю| on this occasion||5|5
+источник| source||2|1
+частота| frequency||4|3
+переменный| alternating||6|5
+корень| root||1|1
+мощность|power||3|3
+увеличится|will increase||4|1
+умножить|multiply||1|1
+искра|spark||1|1
+точки зрения|points of view||6|5
+расширенные|extended||1|1
+сужение|narrowing||1|1
+зрачки|pupils||11|9
+охота|hunting||1|1
+удовлетворить|to satisfy||1|1
+предмет|item,subject||5|4
+сузится|will narrow||1|1
+добыча|production||1|1
+позволяет|allows,enables||1|1
+испытовает|is experiencing||14|11
+усы|whisker||6|5
+помешивать|stir||5|2
+жидкость|liquid||5|4
+стекло|glass||11|8
+чистый|clean||6|5
+муравей|ant||1|1
+смесь|mixture||1|1
+среда обитания|habitat||2|2
+поверхность|surface||5|4
+заблудиться|get lost||1|1
+отрасли|industry||1|1
+напряжение|voltage||1|1
+примерно|approximately||1|1
+питание|powered||5|4
+передача|transmitting||1|1
+провода|wires||3|3
+сопротивление|resistance||6|5
+разделенный|divided||8|6
+маятник|pendulum||6|6
+основной|main||1|1
+достигает|reaches||3|2
+взволнованный|excited||5|4
+зубы|teeth||10|8
+зуб|tooth||2|2
+дыхание|breath||1|1
+справедливый|fair, just||5|4
+трогать|touch||1|1
+тайна|secret||5|5
+старушка|old lady||1|1
+вредны|harmful||3|3
+неожиданный|unexpected,sudden||1|1
+выпятив|sticking out||1|1
+упрямо|stubbornly||5|4
+появляться|appear||10|6
+брать|take||1|1
+берем|take||6|5
+иголки|needles||5|3
+молитва|prayer||14|11
+весьма|very||4|3
+взгляд|sight, view||3|3
+грибы|mushrooms||1|1
+удовольствием|pleasure||6|6
+очередь|queue||1|1
+стрелка|arrow||1|1
+заросшая|overgrown||1|1
+следом|next||1|1
+очевидно|obviously||1|1
+куча|a bunch,heap,pile,stack||2|2
+жесть просто|it is just tough||1|1
+сзади|behind||1|1
+грузовник|truck||1|1
+ломается|breaks down||3|3
+тупой|blunt,stupid,dull,dumb||7|7
+некие|some||2|2
+расметку|marking||1|1
+смущать|embarrass||2|2
+зрители|spectators||1|1
+угадал|guessed right||4|4
+разбираюсь|I am figuring it out||2|2
+кусочек|a piece||3|3
+подожди|wait||1|1

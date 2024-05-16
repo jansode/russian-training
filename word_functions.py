@@ -3,6 +3,7 @@ import random
 import re
 import string
 
+from translate import Translator
 from numpy.random import choice
 
 import file_handling
@@ -62,6 +63,7 @@ def get_wordlist_correct_rates():
 
 	# Normalize weights so that they sum up to 1.
 	total = sum(return_list)
+	
 	normalized_weights = [weight / total for weight in return_list]
 
 	return normalized_weights
@@ -70,9 +72,8 @@ def quiz_word(nr_suggestions):
 	if settings.DEBUG_FUNCTION_CALL:
 		print("CALL: quiz_word")
 
-    # Choose words that have lower correct rate with higher probability.
-	correct_rates_list = get_wordlist_correct_rates()
-	translate_this = choice(wordlist, len(correct_rates_list), p=correct_rates_list)[0]
+	candidates = sorted(wordlist, key=lambda x:x.get_correct_rate())[:int(len(wordlist)/6)]
+	translate_this = choice(candidates)
 
 	copy_set = english_word_set.copy()
 	for word in translate_this.translations:
@@ -155,7 +156,7 @@ def list_problem_words():
 		if (correct_rate < settings.PROBLEM_WORD_THRESHOLD) and (correct_rate != 0):
 			print(word)
 
-def word_frequency_from_text(filename,reverse=False):
+def word_frequency_from_text(filename,reverse=False,output_file=False,output_file_name="default.csv"):
 	if settings.DEBUG_FUNCTION_CALL:
 		print("CALL: word_frequency_from_text")
 		
@@ -179,9 +180,9 @@ def word_frequency_from_text(filename,reverse=False):
 		
 		word_occurences = dict(sorted(word_occurences.items(), key=lambda item: item[1],reverse=reverse))
 		print(len(word_occurences))
-		
+
 		start_print = 0
-		nr_print = 30
+		nr_print = 100
 		index = 0
 		for word in word_occurences:
 			if index > start_print:
@@ -190,8 +191,29 @@ def word_frequency_from_text(filename,reverse=False):
 			index+=1
 			
 			if index == start_print+nr_print:
-				break
-			
+				break	
+				
+		if output_file:
+			while file_handling.file_exists(output_file_name):
+				split_name = output_file_name.split('.')
+				split_name[0] += '_'
+				output_file_name = split_name[0] +'.'+ split_name[1]
+				
+		'''
+		with open(output_file, 'wb') as f:
+			start_print = 0
+			nr_print = 100
+			index = 0
+			for word in word_occurences:
+				if index > start_print:
+					print(word)
+					to_write = word +",\""+translator.translate(word)+"\"" #TODO
+					f.write(to_write.encode('utf8'))
+				index+=1
+				
+				if index == start_print+nr_print:
+					break
+		'''		
 	else:
 		print("Error: File does not exist.")
 

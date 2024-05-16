@@ -49,6 +49,6 @@ def handle_commands(argv):
 				translate(argv[2])
 			elif argv[1] == 'word_frequency':
 				if len(argv) > 2:
-					word_frequency_from_text(argv[2])
+					word_frequency_from_text(argv[2],output_file=True)
 					
 				
