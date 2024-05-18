@@ -2,6 +2,7 @@ import settings
 import random
 import re
 import string
+from termcolor import colored
 
 from translate import Translator
 from numpy.random import choice
@@ -90,15 +91,15 @@ def quiz_word(nr_suggestions):
 		i+=1
 	
 	random.shuffle(false_words)
-	print("translate:"+translate_this.in_russian)
-	print("suggestions:", end='')
+	print(colored("translate:",settings.MISC_COLOR)+colored(translate_this.in_russian,settings.QUIZ_WORD_COLOR))
+	print(colored("suggestions:",settings.MISC_COLOR), end='')
 	
 	index = 1
 	for word in false_words[:-1]:
-		print(" ("+str(index)+") "+word.lstrip(), end=' |')
+		print(colored(" ("+str(index)+") ",settings.MISC_COLOR2)+colored(word.lstrip(),settings.QUIZ_WORD_COLOR), end=colored(' |',settings.MISC_COLOR2))
 		index+=1
 
-	print(" ("+str(index)+") "+false_words[-1].lstrip())
+	print(colored(" ("+str(index)+") ",settings.MISC_COLOR2)+colored(false_words[-1].lstrip(),settings.QUIZ_WORD_COLOR))
 
     # Get index of correct answer.
 	correct_index = 0
@@ -135,7 +136,7 @@ def translate(russian):
 		print("CALL: translate")
 	for word_object in wordlist:
 		if word_object.in_russian == russian:
-			print(word_object.translations)
+			return word_object.translations
 
 def update_wordlist_data(word):
 	if settings.DEBUG_FUNCTION_CALL:
