@@ -4,6 +4,10 @@ from file_handling import *
 from termcolor import colored
 from playsound import playsound
 from moviepy.editor import VideoFileClip
+from asciimatics.effects import Cycle, Stars
+from asciimatics.renderers import FigletText
+from asciimatics.scene import Scene
+from asciimatics.screen import Screen
 import pygame
 import threading
 import queue
@@ -96,16 +100,30 @@ curr_points = 0
 curr_combo = 0
 next_level_threshold = settings.POINTS_TO_LEVEL_UP
 
+def level_screen(screen):
+	effects = [
+		Cycle(
+			screen,
+			FigletText("LEVEL 12!", font='big'),
+			int(screen.height / 2 - 8)),
+		Cycle(
+			screen,
+			FigletText("Press any key...", font='small'),
+			int(screen.height / 2 + 3)),
+			Stars(screen, 200)
+		]
+	screen.play([Scene(effects, 500)],repeat=False)
+
+	
 def change_level(up_or_down):
 	global curr_level
 	
 	changed = False
 	if up_or_down == "UP":
-		if curr_level != settings.MAX_LEVEL:
-			curr_level = (curr_level + 1)
-			changed = True
-			playsound('level_up_sound.mp3')
-			print(colored("LEVEL UP!!!",settings.CORRECT_COLOR))
+		curr_level = (curr_level + 1)
+		changed = True
+		playsound('level_up_sound.mp3')
+		print(colored("LEVEL UP!!!",settings.CORRECT_COLOR))
 	elif up_or_down == "DOWN":
 		curr_level = (curr_level - 1)
 		changed = True
@@ -118,16 +136,21 @@ def change_level(up_or_down):
 
 	if changed:
 		curr_pos = pygame.mixer.music.get_pos()
-		pygame.mixer.music.stop()
 		
-		if curr_level < len(music_list):
+		what_do = settings.DO_AT_LEVELUP[curr_level]
+		
+		if what_do == settings.NEXT_MUSIC:
+			pygame.mixer.music.stop()
 			pygame.mixer.music.load(music_list[curr_level])
-		if curr_level is len(music_list):
+			pygame.mixer.music.play(loops=-1,start=(curr_pos/1000))
+		elif what_do == settings.VIDEO_PRIZE1:
 			url = "https://www.youtube.com/watch?v=m6pE8psWJXE"
 			webbrowser.open(url, new=0, autoraise=True)
+		elif what_do == settings.ASCII_PRIZE1:
+			Screen.wrapper(level_screen)
 			
-		pygame.mixer.music.play(loops=-1,start=(curr_pos/1000))
-
+		
+			
 def session():
 	if settings.DEBUG_FUNCTION_CALL:
 		print("CALL: session")
