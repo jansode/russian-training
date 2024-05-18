@@ -1,17 +1,19 @@
 DEBUG_FUNCTION_CALL = False
 
+MUSIC_ON = True
+EFFECTS_ON = True
+
 SAVEFOLDER = "savefiles"
 WORDLISTFOLDER = "wordlists"
-
 MOST_COMMON_WORDS = "most_common_words.csv"
-
 WORDLIST_FILE = "custom_words.csv"
+
 SHOW_TIMES_ENCOUNTERED = True
 SHOW_TIMES_CORRECT = True
 
 INVALID_COMMAND_TEXT = "Invalid command..."
 
-NUMBER_OF_SUGGESTIONS = 5
+NUMBER_OF_SUGGESTIONS = 3
 PROBLEM_WORD_THRESHOLD = 0.4
 
 QUIZ_WORD_COLOR = "light_grey"
@@ -50,8 +52,6 @@ MUSIC_LIST = [
 WRONG_SOUND = 'audio/wrong_sound.mp3'
 CORRECT_SOUND = 'audio/correct_sound.mp3'
 LEVEL_UP_SOUND = 'audio/level_up_sound.mp3'
-
-
 
 DO_AT_LEVELUP = {
 	1 : NEXT_MUSIC,

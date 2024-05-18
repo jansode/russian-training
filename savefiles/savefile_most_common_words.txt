@@ -1,203 +1,203 @@
-и|and, though|conjunction|0|0
+и|and, though|conjunction|1|1
 в|in, at|preposition|1|1
-не|not|particle|0|0
-он|he|pronoun|0|0
-на|on, it, at, to|preposition|0|0
+не|not|particle|1|1
+он|he|pronoun|1|1
+на|on, it, at, to|preposition|1|1
 я|I|pronoun|1|1
 что|what, that, why|сonjunction, pronoun|1|1
-тот|that|adjective, pronoun|0|0
-быть|to be|verb|0|0
-с|with, and, from, of|preposition|0|0
-а|while, and, but|conjunction|0|0
+тот|that|adjective, pronoun|1|1
+быть|to be|verb|1|1
+с|with, and, from, of|preposition|1|1
+а|while, and, but|conjunction|1|1
 весь|all, everything|pron, noun|0|0
-это|that, this, it|pronoun|0|0
-как|how, what, as, like|adverb, conj|0|0
-она|she|pronoun|0|0
+это|that, this, it|pronoun|1|1
+как|how, what, as, like|adverb, conj|1|1
+она|she|pronoun|1|1
 по|on, along, by|preposition|0|0
 но|but|conjunction, noun|1|1
 они|they|pronoun|1|1
 к|to, for, by|preposition|0|0
-у|by, with, of|preposition|0|0
+у|by, with, of|preposition|1|1
 ты|you, thou|pronoun|0|0
-из|from, of, in|preposition|0|0
+из|from, of, in|preposition|1|1
 мы|we|pronoun|0|0
 за|behind, over, at, after|preposition|1|1
 вы|you|pronoun|0|0
 так|so, thus, then|adverb|0|0
-же|and, as for, but, same|conj, particle|0|0
-от|from, of, for|preposition|0|0
+же|and, as for, but, same|conj, particle|1|1
+от|from, of, for|preposition|1|1
 сказать|to say, to speak|verb|1|1
 этот|this|pronoun|0|0
 который|which, who, that|pronoun|1|1
-мочь|be able|verb|0|0
+мочь|be able|verb|1|0
 человек|man, person|noun|1|1
 о|of, about, against|preposition|1|1
-один|one, some, alone|cardinal number, pronoun|0|0
+один|one, some, alone|cardinal number, pronoun|1|1
 ещё|still, yet|adverb|0|0
 бы|would|particle|0|0
 такой|such, so, some|pronoun|0|0
 только|only, merely, but|adverb, conj|0|0
-себя|myself, himself, herself|pron, particle|0|0
-своё|one's own, my, our|pronoun, noun|0|0
-какой|what, which, how|pronoun|0|0
+себя|myself, himself, herself|pron, particle|1|1
+своё|one's own, my, our|pronoun, noun|1|1
+какой|what, which, how|pronoun|1|1
 когда|when, while, as|adverb, conj|0|0
-уже|already, by now|adverb|0|0
+уже|already, by now|adverb|2|1
 для|for, to|preposition|1|1
 вот|here, there, this is, that's|particle|0|0
 кто|who, that, some|pronoun|0|0
 да|yes, but|conj, particle|1|1
-говорить|to say, to tell, to speak|verb|0|0
+говорить|to say, to tell, to speak|verb|1|1
 год|year|noun|0|0
 знать|to know, be aware|verb|0|0
 мой|my, mine|pronoun|1|1
 до|to, up to, about, before|preposition|0|0
 или|or|conjunction|1|1
-если|if|conjunction|0|0
+если|if|conjunction|1|1
 время|time, season|noun|1|1
 рука|hand, arm|noun|0|0
 нет|no, not, but|negation|0|0
-самый|most, the very, the same|pronoun|0|0
-ни|not a, not, neither… nor|conj, particle|0|0
+самый|most, the very, the same|pronoun|1|1
+ни|not a, not, neither… nor|conj, particle|1|0
 стать|to become, begin, come|verb|1|1
-большой|big, large, important|adjective|0|0
+большой|big, large, important|adjective|1|1
 даже|even|particle|1|1
 другой|other, another, different|pronoun|0|0
 наш|our, ours|pronoun|1|1
-свой|my, our, your|pronoun|0|0
-ну|now, right, well, come on|interj, particle|0|0
+свой|my, our, your|pronoun|1|1
+ну|now, right, well, come on|interj, particle|1|1
 под|under, for, towards, to|preposition|0|0
-где|where|adverb|0|0
-дело|business, affair, matter|noun|0|0
-есть|to eat, to be|verb|0|0
+где|where|adverb|1|1
+дело|business, affair, matter|noun|1|1
+есть|to eat, to be|verb|1|1
 сам|myself, yourself|pronoun|1|1
-раз|time, once, since|noun, adverb|0|0
-чтобы|that, in order that|conjunction, particle|0|0
-два|two|cardinal number|0|0
-там|there, then|adverb|0|0
+раз|time, once, since|noun, adverb|1|1
+чтобы|that, in order that|conjunction, particle|1|1
+два|two|cardinal number|1|1
+там|there, then|adverb|1|1
 чем|than; instead of|conjunction, particle|0|0
 глаз|eye; sight|noun|0|0
-жизнь|life|noun|0|0
+жизнь|life|noun|1|1
 первый|first, front, former|adjective, number|1|0
 день|day|noun|0|0
-тут|here, now, then|adverb|0|0
+тут|here, now, then|adverb|1|1
 во|in, at; super, exactly|preposition, particle|0|0
 ничто|nothing|pronoun|1|1
-потом|afterwards, then|adverb|0|0
+потом|afterwards, then|adverb|1|1
 очень|very|adverb|0|0
 со|with|preposition|0|0
-хотеть|to want, like|verb|0|0
-ли|whether, if|conj, particle|0|0
-при|attached to, in the presence of, by, about; masterrussian, dot com|preposition|1|0
-голова|head, mind, brains|noun|0|0
+хотеть|to want, like|verb|1|1
+ли|whether, if|conj, particle|1|0
+при|attached to, in the presence of, by, about; masterrussian, dot com|preposition|3|0
+голова|head, mind, brains|noun|1|1
 надо|over, above, ought to|prep, verb|0|0
-без|without|preposition|0|0
-видеть|to see|verb|0|0
+без|without|preposition|1|1
+видеть|to see|verb|1|1
 идти|to go, come|verb|1|1
-теперь|now, nowadays|adverb|0|0
+теперь|now, nowadays|adverb|1|1
 тоже|also, as well, too|adverb|1|1
 стоять|to stand, be, stand up|verb|0|0
 друг|friend|noun|0|0
 дом|house, home|noun|1|1
 сейчас|now, presently, soon|adverb|1|1
-можно|one can|predicate|0|0
+можно|one can|predicate|1|1
 после|after, afterwards|preposition|1|1
 слово|word|noun|0|0
 здесь|here|adverb|1|1
-думать|to think; believe|verb|0|0
-место|place; seat|noun|0|0
-спросить|to ask|verb|0|0
+думать|to think; believe|verb|1|1
+место|place; seat|noun|1|1
+спросить|to ask|verb|1|1
 через|through, across|preposition|1|1
-лицо|face; person|noun|0|0
-тогда|then|adverb|0|0
+лицо|face; person|noun|1|1
+тогда|then|adverb|1|1
 ведь|you see, you know|conj|0|0
 хороший|good, nice (see #152)|adjective|0|0
 каждый|each, every|pronoun|0|0
-новый|new; modern|adjective|0|0
+новый|new; modern|adjective|1|1
 жить|to live|verb|0|0
 должный|due, proper|adjective|0|0
-смотреть|to look, watch|verb|0|0
+смотреть|to look, watch|verb|1|1
 почему|why|adverb|1|1
 потому|that's why|adverb|0|0
 сторона|side, party|noun|0|0
 просто|simply|adverb|1|1
 нога|foot, leg|noun|0|0
-сидеть|to sit|verb|0|0
-понять|to understand; realize|verb|0|0
+сидеть|to sit|verb|1|1
+понять|to understand; realize|verb|1|1
 иметь|to have, own|verb|0|0
 конечный|final, last|adjective|0|0
 делать|to do, make|verb|0|0
-вдруг|suddenly|adverb|0|0
+вдруг|suddenly|adverb|1|1
 над|above, over|preposition|0|0
-взять|to take|verb|0|0
-никто|nobody|pronoun|0|0
+взять|to take|verb|1|1
+никто|nobody|pronoun|1|1
 сделать|to do, make, finish|verb|0|0
 дверь|door|noun|1|1
-перед|before, in front of|preposition|0|0
+перед|before, in front of|preposition|1|1
 нужный|necessary|adjective|1|1
 понимать|to understand|verb|1|1
-казаться|to seem, appear; masterrussian, dot com|verb|0|0
+казаться|to seem, appear; masterrussian, dot com|verb|1|1
 работа|work, job|noun|1|1
-три|three|cardinal number|0|0
+три|three|cardinal number|1|1
 ваш|yours|pronoun|1|1
-уж|really, already|adverb,  particle|0|0
+уж|really, already|adverb,  particle|1|0
 земля|earth, land, soil|noun|0|0
 конец|end, distance|noun|1|1
-несколько|several, some|adverb|0|0
+несколько|several, some|adverb|1|1
 час|hour, time|noun|1|1
 голос|voice|noun|0|0
-город|town, city|noun|0|0
+город|town, city|noun|1|1
 последний|last, the latest, new|adjective|1|1
 пока|for the present|adverb|0|0
-хорошо|well (see #114)|adverb|0|0
+хорошо|well (see #114)|adverb|1|1
 давать|to give; let, allow|verb|1|1
 вода|water|noun|1|1
-более|more|adverb|0|0
+более|more|adverb|1|1
 хотя|although|conjunction|0|0
-всегда|always|adverb|0|0
+всегда|always|adverb|1|1
 второй|second|ordinal number|0|0
-куда|where, what for, much|adverb|0|0
-пойти|to go|verb|0|0
+куда|where, what for, much|adverb|1|1
+пойти|to go|verb|1|1
 стол|table, desk; board|noun|1|1
 ребёнок|child, kid, infant|noun|1|1
-увидеть|to see|verb|0|0
-сила|strength, force|noun|0|0
-отец|father (see #918)|noun|0|0
-женщина|woman|noun|0|0
+увидеть|to see|verb|1|1
+сила|strength, force|noun|1|1
+отец|father (see #918)|noun|1|1
+женщина|woman|noun|1|1
 машина|car, machine, engine|noun|1|1
 случай|case, occasion, incident|noun|1|0
 ночь|night|noun|1|1
 сразу|at once, right away, just|adverb|0|0
-мир|world, peace|noun|0|0
+мир|world, peace|noun|1|1
 совсем|quite, entirely, totally|adverb|1|1
-остаться|to remain, stay (see #297)|verb|0|0
+остаться|to remain, stay (see #297)|verb|1|1
 об|about, of (see #34)|preposition|1|2
-вид|appearance, look, view|noun|0|0
+вид|appearance, look, view|noun|1|1
 выйти|to go out, come out, appear|verb|0|0
 дать|to give; masterrussian, dot com|verb|1|1
 работать|to work|verb|0|0
-любить|to love|verb|0|0
+любить|to love|verb|1|1
 старый|old|adjective|0|0
 почти|almost|adverb|0|0
-ряд|row, line|noun|0|0
+ряд|row, line|noun|1|1
 оказаться|find oneself, turn out|verb|0|0
 начало|beginning, origin, source|noun|0|0
 твой|your, yours (informal)|pronoun|0|0
 вопрос|question, matter, problem|noun|0|0
-много|many, much (see #799)|adverb|0|0
+много|many, much (see #799)|adverb|1|1
 война|war|noun|0|0
-снова|again|adverb|0|0
+снова|again|adverb|1|1
 ответить|to answer, reply (see #404)|verb|0|0
 между|between, among|preposition|1|1
-подумать|to think|verb|0|0
+подумать|to think|verb|1|1
 опять|again|adverb|1|1
-белый|white|adjective|0|0
+белый|white|adjective|1|1
 деньги|money|noun|0|0
 значить|to mean,  signify|verb|0|0
 про|about, for|preposition|0|0
 лишь|only, as soon as|adverb, conj|0|0
-минута|minute, moment|noun|0|0
+минута|minute, moment|noun|1|1
 жена|wife|noun|0|0
-посмотреть|to take a look, watch, inspect|verb|0|0
+посмотреть|to take a look, watch, inspect|verb|1|1
 правда|truth|noun|1|1
 главный|main, chief|adjective|1|1
 страна|country|noun|0|0
@@ -205,131 +205,131 @@
 ждать|to wait|verb|1|1
 мать|mother|noun|0|0
 будто|as if, as though|conjunction|1|1
-никогда|never|adverb|0|0
+никогда|never|adverb|1|1
 товарищ|comrade, friend|noun|0|0
-дорога|road, way, journey|noun|0|0
-однако|however, though|conj,  misc|0|0
-лежать|to lie, be situated|verb|0|0
-именно|namely, just|misc|0|0
-окно|window, windowsill|noun|0|0
+дорога|road, way, journey|noun|1|1
+однако|however, though|conj,  misc|1|1
+лежать|to lie, be situated|verb|1|1
+именно|namely, just|misc|1|1
+окно|window, windowsill|noun|1|1
 никакой|no, none|pronoun|0|0
 найти|to find, discover, consider|verb|0|0
-писать|to write|verb|0|0
+писать|to write|verb|1|1
 комната|a room|noun|0|0
-Москва|Moscow|noun|0|0
-часть|part, share, department|noun|0|0
-вообще|in general, altogether, on the whole|adverb|0|0
+Москва|Moscow|noun|1|1
+часть|part, share, department|noun|1|1
+вообще|in general, altogether, on the whole|adverb|1|1
 книга|a book|noun|0|0
 маленький|small, little|adjective|0|0
-улица|street; masterrussian, dot com|noun|0|0
-решить|to decide, solve|verb|0|0
+улица|street; masterrussian, dot com|noun|1|1
+решить|to decide, solve|verb|1|1
 далекий|distant, remote|adjective|0|0
-душа|soul, spirit|noun|0|0
-чуть|hardly, slightly|adverb|0|0
-вернуться|to return|verb|0|0
-утро|morning|noun|0|0
+душа|soul, spirit|noun|1|1
+чуть|hardly, slightly|adverb|1|0
+вернуться|to return|verb|2|1
+утро|morning|noun|1|1
 некоторый|some|pronoun|0|0
 считать|to count, consider|verb|0|0
 сколько|how much, how many|cardinal|0|0
-помнить|to remember|verb|0|0
-вечер|evening|noun|0|0
-пол|floor; sex|noun|0|0
+помнить|to remember|verb|1|1
+вечер|evening|noun|1|1
+пол|floor; sex|noun|1|1
 таки|after all|particle|0|0
-получить|to receive, get, obtain|verb|0|0
+получить|to receive, get, obtain|verb|1|1
 народ|people, nation|noun|0|0
 плечо|shoulder, upper arm|noun|0|0
-хоть|even, if you want, though|conjunction|0|0
+хоть|even, if you want, though|conjunction|1|1
 сегодня|today|adverb|0|0
 бог|god|noun|0|0
-вместе|together|adverb|0|0
-взгляд|look, glance; view|noun|0|0
+вместе|together|adverb|1|1
+взгляд|look, glance; view|noun|1|1
 ходить|to go, walk|verb|0|0
 зачем|what for, why|adverb|0|0
 советский|Soviet|adjective|0|0
-русский|Russian|adjective|0|0
-бывать|be, visit, happen|verb|0|0
+русский|Russian|adjective|1|1
+бывать|be, visit, happen|verb|1|1
 полный|full, complete|adj|0|0
 прийти|to come, arrive (see #464)|verb|0|0
 палец|finger, toe|noun|0|0
-Россия|Russia|noun|0|0
-любой|any, every|pronoun|0|0
+Россия|Russia|noun|1|1
+любой|any, every|pronoun|1|1
 история|history, story, event|noun|0|0
-наконец|at last, finally|adverb|0|0
-мысль|thought, idea|noun|0|0
+наконец|at last, finally|adverb|1|1
+мысль|thought, idea|noun|1|1
 узнать|to know, learn, recognize|verb|0|0
-назад|back, backwards|adverb|0|0
+назад|back, backwards|adverb|1|1
 общий|general, common|adjective|0|0
 заметить|to notice, observe|verb|0|0
 словно|as if, like|conjunction|0|0
 прошлый|past|adjective|0|0
-уйти|to leave, go away|verb|0|0
+уйти|to leave, go away|verb|1|1
 известный|well-known, famous|adjective|0|0
-давно|long ago|adverb|0|0
+давно|long ago|adverb|1|0
 слышать|to hear|verb|0|0
-слушать|to listen, hear|verb|0|0
+слушать|to listen, hear|verb|1|1
 бояться|to be afraid, fear|verb|0|0
-сын|son|noun|0|0
+сын|son|noun|1|1
 нельзя|it is impossible, can't|predicate|0|0
 прямо|straight, frankly|adverb|0|0
 долго|for a long time|adverb|0|0
 быстро|fast, quickly|adverb|0|0
-лес|forest|noun|0|0
-похожий|similar, alike|adjective|0|0
+лес|forest|noun|1|1
+похожий|similar, alike|adjective|1|1
 пора|time; pore (see #1000)|noun|0|0
-пять|five|cardinal number|0|0
-глядеть|to look,  gaze|verb|0|0
+пять|five|cardinal number|1|1
+глядеть|to look,  gaze|verb|1|1
 оно|it|pronoun|0|0
 сесть|to sit|verb|0|0
 имя|name|noun|0|0
 ж|and, as for, but (see #27)|misc|0|0
 разговор|talk, conversation|noun|0|0
-тело|body|noun|0|0
+тело|body|noun|1|1
 молодой|young (see #679); bridegroom (as a noun)|adjective|0|0
-стена|wall|noun|0|0
+стена|wall|noun|1|1
 красный|red|adjective|0|0
 читать|to read|verb|0|0
 право|right|noun|0|0
-старик|old man|noun|0|0
-ранний|early|adjective|0|0
+старик|old man|noun|1|1
+ранний|early|adjective|1|1
 хотеться|want, like|misc (impersonal)|0|0
-мама|mummy, mum|noun|0|0
+мама|mummy, mum|noun|1|1
 оставаться|to remain, stay (see #173)|verb|0|0
 высокий|tall, high|adjective|0|0
-путь|way, track, path|noun|0|0
-поэтому|therefore|adverb|0|0
-совершенно|absolutely, quite|adverb|0|0
+путь|way, track, path|noun|1|1
+поэтому|therefore|adverb|1|1
+совершенно|absolutely, quite|adverb|1|1
 кроме|except, besides|preposition|0|0
-тысяча|a thousand|cardinal number|0|0
+тысяча|a thousand|cardinal number|1|1
 месяц|month|noun|0|0
 брать|to take; hire|verb|0|0
 написать|to write|verb|0|0
 целый|intact, whole, entire|adjective|0|0
 огромный|huge, enormous|adjective|0|0
-начинать|to begin (see #413)|verb|0|0
+начинать|to begin (see #413)|verb|1|2
 спина|back|noun|0|0
 настоящий|present;real, true|adjective|0|0
 пусть|let's, though|conj, particle|0|0
-язык|tongue, language|noun|0|0
-точно|exactly|adverb|0|0
+язык|tongue, language|noun|1|1
+точно|exactly|adverb|1|1
 среди|among|preposition|0|0
 чувствовать|to feel|verb|0|0
-сердце|heart|noun|0|0
+сердце|heart|noun|1|1
 вести|to lead|verb|0|0
-иногда|sometimes|adverb|0|0
+иногда|sometimes|adverb|1|1
 мальчик|boy|noun|0|0
 успеть|to be in time, be successful|verb|0|0
 небо|sky|noun|0|0
 живой|living, live, lively|adjective|0|0
-смерть|death|noun|0|0
+смерть|death|noun|1|1
 продолжать|to continue|verb|0|0
 девушка|girl, miss (see #524)|noun|0|0
-образ|shape, form, image|noun|0|0
+образ|shape, form, image|noun|1|0
 ко|to, towards, by (see #19)|preposition|0|0
 забыть|to forget|verb|0|0
-вокруг|around|preposition|0|0
-письмо|letter|noun|0|0
+вокруг|around|preposition|1|1
+письмо|letter|noun|1|1
 власть|power|noun|0|0
-чёрный|black (see #456)|adjective|0|0
+чёрный|black (see #456)|adjective|1|1
 пройти|to pass, go by, be over (see #543)|verb|0|0
 появиться|to appear, show up (see #699)|verb|0|0
 воздух|air|noun|0|0

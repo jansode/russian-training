@@ -21,6 +21,34 @@ curr_points = 0
 curr_combo = 0
 next_level_threshold = settings.POINTS_TO_LEVEL_UP
 
+def print_help():
+	print("exit: Exits the program.")
+	print("dictionary: Shows a list of the words the program knows.")
+	print("set: Modify program settings.")
+	print("\tdebug_function (true/false): Turn function call debug info on or off.")
+	print("wordfile [wordfile_name]: Change word file.")
+	print("problem_words: List words that have a low score.")
+	print("clear: Clears the screen.")
+	print("music (on/off): Toggle music")
+	print("effects (on/off): Toggle sound effects")
+	print("help: Shows this text")
+	print("")
+
+def set_music(on_or_off):
+	if on_or_off == "ON":
+		settings.MUSIC_ON = True
+		
+		global music_list, curr_level
+		if curr_level < settings.MAX_MUSIC_LEVEL:
+			pygame.mixer.music.load(music_list[curr_level])
+		else:
+			pygame.mixer.music.load(music_list[MAX_MUSIC_LEVEL])
+			
+		pygame.mixer.music.play(loops=-1)
+	elif on_or_off == "OFF":
+		settings.MUSIC_ON = False
+		pygame.mixer.music.stop()
+	
 # returns a tuple of booleans. (right answer check after this function?,get new question after?)
 def handle_commands(command_string):
 	if settings.DEBUG_FUNCTION_CALL:
@@ -37,8 +65,7 @@ def handle_commands(command_string):
 	elif command_string == "problem_words":
 		list_problem_words()
 		return (False,True)
-	elif command_string == "clear":
-		
+	elif command_string == "clear":	
 		my_os = platform.system()
 		if my_os == 'Linux':
 			os.system("clear")
@@ -46,14 +73,7 @@ def handle_commands(command_string):
 			os.system("cls")
 		return (False,True)
 	elif command_string == "help":
-		print("exit: Exits the program.")
-		print("dictionary: Shows a list of the words the program knows.")
-		print("set: Modify program settings.")
-		print("\tdebug_function (true/false): Turn function call debug info on or off.")
-		print("wordfile [wordfile_name]: Change word file.")
-		print("problem_words: List words that have a low score.")
-		print("help: Shows this text")
-		print("")
+		print_help()
 		return (False,True)
 		
 	splitted = command_string.split(" ")
@@ -97,6 +117,21 @@ def handle_commands(command_string):
 			print(settings.INVALID_COMMAND_TEXT)
 			print("The specified word file does not exist.")
 			return (False,False)
+	elif splitted[0] == "music":
+	
+		if splitted[1] == "on":
+			set_music("ON")
+		elif splitted[1] == "off":
+			set_music("OFF")
+			
+		return (False,False)
+	elif splitted[0] == "effects":
+		if splitted[1] == "on":
+			settings.EFFECTS_ON = True
+		elif splitted[1] == "off":
+			settings.EFFECTS_ON = False
+			
+		return (False,False)
 	else:
 		return (True,True)
 
@@ -125,12 +160,15 @@ def change_level(up_or_down):
 	if up_or_down == "UP":
 		curr_level = (curr_level + 1)
 		changed = True
-		playsound(settings.LEVEL_UP_SOUND)
+		if settings.EFFECTS_ON:
+			playsound(settings.LEVEL_UP_SOUND)
 		print(colored("LEVEL UP!!!",settings.CORRECT_COLOR))
+		
 	elif up_or_down == "DOWN":
 		curr_level = (curr_level - 1)
 		changed = True
-		playsound('level_down_sound.mp3')
+		if settings.EFFECTS_ON:
+			playsound('level_down_sound.mp3')
 
 		if curr_level < 0:
 			curr_level = 0
@@ -141,16 +179,21 @@ def change_level(up_or_down):
 		curr_pos = pygame.mixer.music.get_pos()
 		
 		what_do = settings.DO_AT_LEVELUP[curr_level] if curr_level in settings.DO_AT_LEVELUP else settings.DO_LAST_INDEFINITELY
+		Screen.wrapper(level_screen)
 		
 		if what_do == settings.NEXT_MUSIC:
 			pygame.mixer.music.stop()
 			pygame.mixer.music.load(music_list[curr_level])
-			pygame.mixer.music.play(loops=-1,start=(curr_pos/1000))
+			if settings.MUSIC_ON:
+				pygame.mixer.music.play(loops=-1,start=(curr_pos/1000))
 		elif what_do == settings.VIDEO_PRIZE1:
-			url = "https://www.youtube.com/watch?v=m6pE8psWJXE"
+			url = settings.VIDEO_PRIZE1
 			webbrowser.open(url, new=0, autoraise=True)
+			
+		'''
 		elif what_do == settings.ASCII_PRIZE1 or settings.DO_LAST_INDEFINITELY:
 			Screen.wrapper(level_screen)
+		'''
 
 def session():
 	if settings.DEBUG_FUNCTION_CALL:
@@ -192,14 +235,15 @@ def session():
 			success_rate = str(round(float(word.times_correct / word.times_encountered),2))
 			if word.times_encountered == 0:
 				success_rate = 0
-				
+			
 			print(colored("Correct! Progress with this word (success rate): "+success_rate,settings.CORRECT_COLOR))
 			if settings.SHOW_TIMES_ENCOUNTERED:
 				print(colored("Times encountered: "+str(word.times_encountered),settings.CORRECT_COLOR))
 			if settings.SHOW_TIMES_CORRECT:
 				print(colored("Times correct: "+str(word.times_correct),settings.CORRECT_COLOR))
-
-			playsound(settings.CORRECT_SOUND)
+			
+			if settings.EFFECTS_ON:
+				playsound(settings.CORRECT_SOUND)
 			update_wordlist_data(word)
 			
 			added_points = settings.POINTS_FOR_CORRECT
@@ -231,10 +275,8 @@ def session():
 			print(colored("Correct translations: ",settings.WRONG_COLOR))
 			print(colored(translate(word.in_russian),settings.WRONG_COLOR))
 			print(colored("Points: "+str(curr_points),settings.WRONG_COLOR)+" "+colored("(-"+str(settings.POINTS_RETRACTED_FOR_WRONG)+") Level: "+str(curr_level),settings.WRONG_COLOR))
-			playsound(settings.WRONG_SOUND)
-			
-			#change_level("DOWN")
-
+			if settings.EFFECTS_ON:
+				playsound(settings.WRONG_SOUND)
 		
 		got_answer_from_previous = True
 		save_words()
