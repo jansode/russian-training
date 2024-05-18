@@ -27,6 +27,27 @@ POINTS_RETRACTED_FOR_WRONG = 50
 NEXT_MUSIC = "next music"
 VIDEO_PRIZE1 = "https://www.youtube.com/watch?v=m6pE8psWJXE"
 ASCII_PRIZE1 = "ascii1"
+DO_LAST_INDEFINITELY = "last_indefinitely"
+
+MUSIC_LIST = [
+	"audio/bg_lp_most.mp3",
+	"audio/bg_lp_middle.mp3",
+	"audio/bg_lp_better.mp3",
+	"audio/bg_lp_best.mp3",
+	"audio/bg_level1.mp3",
+	"audio/bg_level2.mp3",
+	"audio/bg_level3.mp3",
+	"audio/bg_level4.mp3",
+	"audio/bg_level5.mp3",
+	"audio/bg_level6.mp3",
+	"audio/bg_level7.mp3"
+]
+
+WRONG_SOUND = 'audio/wrong_sound.mp3'
+CORRECT_SOUND = 'audio/correct_sound.mp3'
+LEVEL_UP_SOUND = 'audio/level_up_sound.mp3'
+
+
 
 DO_AT_LEVELUP = {
 	1 : NEXT_MUSIC,
@@ -40,7 +61,7 @@ DO_AT_LEVELUP = {
 	9 : NEXT_MUSIC,
 	10 : NEXT_MUSIC,
 	11 : VIDEO_PRIZE1,
-	12 : ASCII_PRIZE1
+	12 : ASCII_PRIZE1,
 }
 
 

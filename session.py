@@ -15,6 +15,12 @@ import os
 import platform
 import webbrowser
 
+music_list = settings.MUSIC_LIST
+curr_level = 0
+curr_points = 0
+curr_combo = 0
+next_level_threshold = settings.POINTS_TO_LEVEL_UP
+
 # returns a tuple of booleans. (right answer check after this function?,get new question after?)
 def handle_commands(command_string):
 	if settings.DEBUG_FUNCTION_CALL:
@@ -94,17 +100,14 @@ def handle_commands(command_string):
 	else:
 		return (True,True)
 
-music_list = ["bg_lp_most.mp3","bg_lp_middle.mp3","bg_lp_better.mp3","bg_lp_best.mp3","bg_level1.mp3","bg_level2.mp3","bg_level3.mp3","bg_level4.mp3","bg_level5.mp3","bg_level6.mp3","bg_level7.mp3"]
-curr_level = 0
-curr_points = 0
-curr_combo = 0
-next_level_threshold = settings.POINTS_TO_LEVEL_UP
 
 def level_screen(screen):
+	global curr_level
+
 	effects = [
 		Cycle(
 			screen,
-			FigletText("LEVEL 12!", font='big'),
+			FigletText("LEVEL "+str(curr_level)+" !", font='big'),
 			int(screen.height / 2 - 8)),
 		Cycle(
 			screen,
@@ -122,7 +125,7 @@ def change_level(up_or_down):
 	if up_or_down == "UP":
 		curr_level = (curr_level + 1)
 		changed = True
-		playsound('level_up_sound.mp3')
+		playsound(settings.LEVEL_UP_SOUND)
 		print(colored("LEVEL UP!!!",settings.CORRECT_COLOR))
 	elif up_or_down == "DOWN":
 		curr_level = (curr_level - 1)
@@ -137,7 +140,7 @@ def change_level(up_or_down):
 	if changed:
 		curr_pos = pygame.mixer.music.get_pos()
 		
-		what_do = settings.DO_AT_LEVELUP[curr_level]
+		what_do = settings.DO_AT_LEVELUP[curr_level] if curr_level in settings.DO_AT_LEVELUP else settings.DO_LAST_INDEFINITELY
 		
 		if what_do == settings.NEXT_MUSIC:
 			pygame.mixer.music.stop()
@@ -146,11 +149,9 @@ def change_level(up_or_down):
 		elif what_do == settings.VIDEO_PRIZE1:
 			url = "https://www.youtube.com/watch?v=m6pE8psWJXE"
 			webbrowser.open(url, new=0, autoraise=True)
-		elif what_do == settings.ASCII_PRIZE1:
+		elif what_do == settings.ASCII_PRIZE1 or settings.DO_LAST_INDEFINITELY:
 			Screen.wrapper(level_screen)
-			
-		
-			
+
 def session():
 	if settings.DEBUG_FUNCTION_CALL:
 		print("CALL: session")
@@ -198,7 +199,7 @@ def session():
 			if settings.SHOW_TIMES_CORRECT:
 				print(colored("Times correct: "+str(word.times_correct),settings.CORRECT_COLOR))
 
-			playsound('correct_sound.mp3')
+			playsound(settings.CORRECT_SOUND)
 			update_wordlist_data(word)
 			
 			added_points = settings.POINTS_FOR_CORRECT
@@ -230,7 +231,7 @@ def session():
 			print(colored("Correct translations: ",settings.WRONG_COLOR))
 			print(colored(translate(word.in_russian),settings.WRONG_COLOR))
 			print(colored("Points: "+str(curr_points),settings.WRONG_COLOR)+" "+colored("(-"+str(settings.POINTS_RETRACTED_FOR_WRONG)+") Level: "+str(curr_level),settings.WRONG_COLOR))
-			playsound('wrong_sound.mp3')
+			playsound(settings.WRONG_SOUND)
 			
 			#change_level("DOWN")
 

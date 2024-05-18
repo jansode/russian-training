@@ -1,32 +1,32 @@
 по этому случаю| on this occasion||5|5
 источник| source||9|8
-частота| frequency||8|7
-переменный| alternating||8|7
+частота| frequency||9|8
+переменный| alternating||9|8
 корень| root||1|1
 мощность|power||3|3
-увеличится|will increase||29|25
+увеличится|will increase||33|28
 умножить|multiply||1|1
 искра|spark||1|1
-точки зрения|points of view||8|7
+точки зрения|points of view||9|8
 расширенные|extended||1|1
 сужение|narrowing||1|1
-зрачки|pupils||16|14
+зрачки|pupils||17|15
 охота|hunting||1|1
 удовлетворить|to satisfy||1|1
 предмет|item,subject||8|7
 сузится|will narrow||1|1
 добыча|production||1|1
 позволяет|allows,enables||1|1
-испытовает|is experiencing||23|20
-усы|whisker||8|7
-помешивать|stir||23|17
+испытовает|is experiencing||25|22
+усы|whisker||9|8
+помешивать|stir||24|18
 жидкость|liquid||8|7
-стекло|glass||32|26
-чистый|clean||8|7
+стекло|glass||33|27
+чистый|clean||9|8
 муравей|ant||1|1
 смесь|mixture||1|1
 среда обитания|habitat||2|2
-поверхность|surface||8|7
+поверхность|surface||9|8
 заблудиться|get lost||1|1
 отрасли|industry||1|1
 напряжение|voltage||1|1
@@ -35,7 +35,7 @@
 передача|transmitting||1|1
 провода|wires||3|3
 сопротивление|resistance||8|7
-разделенный|divided||24|21
+разделенный|divided||25|22
 маятник|pendulum||6|6
 основной|main||1|1
 достигает|reaches||8|7
@@ -51,11 +51,11 @@
 неожиданный|unexpected,sudden||1|1
 выпятив|sticking out||1|1
 упрямо|stubbornly||8|7
-появляться|appear||35|23
+появляться|appear||36|24
 брать|take||1|1
 берем|take||8|7
 иголки|needles||16|14
-молитва|prayer||30|26
+молитва|prayer||32|28
 весьма|very||8|7
 взгляд|sight, view||3|3
 грибы|mushrooms||1|1
@@ -89,26 +89,26 @@
 судить|judge||1|1
 столбики|columns||1|1
 дойду|I will get there||1|1
-обмануть|deceive||15|13
+обмануть|deceive||16|14
 взгляд в упор|point-blank look||1|1
 настороженность|alertness||1|1
-моргая|blinking||18|14
+моргая|blinking||23|19
 отводая|retracting||1|1
 дергается|twitches||1|1
 приближаться|approach||1|1
 прикоснуться|touch||1|1
 напасть|misfortune||1|1
 тонко|thin,subtly||1|1
-намекать|hint||15|6
-общаться|communicate||12|7
+намекать|hint||16|7
+общаться|communicate||16|11
 удар|hit||8|7
-послать|send||20|4
+послать|send||23|4
 целовать|kiss||1|1
-изменилась|changed||11|9
+изменилась|changed||13|11
 резко|sharp||1|1
 отвела|took away||1|1
 удивленной|surprised||1|1
-насторожил|alerted||25|15
+насторожил|alerted||30|20
 испугал|scared||1|1
 доставил|delivered||1|1
 какой-то|some kind||1|1
@@ -123,7 +123,7 @@
 похожей|similar||1|1
 принимает|accepts||1|1
 прижимается|snuggles||1|1
-прячет|hides||12|9
+прячет|hides||16|13
 незаметнее|more discreetly||1|1
 покачивать|shake||1|1
 тазом|pelvis||1|1
@@ -131,29 +131,29 @@
 кончик|tip||1|1
 загнут|bent||1|1
 друженливые|friendly||1|1
-понюхать|take a smell||14|8
+понюхать|take a smell||16|10
 погладить|stroke,caress||1|1
 трется|rubs||1|1
 положение|position||1|1
 полна сил|full of strength||1|1
 уверенно|confident||1|1
-охотнее|more willingly||10|1
+охотнее|more willingly||13|4
 с опущенными|with lowered||1|1
 соц|social||8|7
-ведет|leads||15|11
-объятиями|hugs||13|11
+ведет|leads||17|13
+объятиями|hugs||14|12
 устраните|eliminate||1|1
-раздражитель|irritant||11|7
-предоставите|provide||9|5
+раздражитель|irritant||15|11
+предоставите|provide||11|7
 условна|conditional||1|1
-осязательные|tactile||15|11
+осязательные|tactile||16|12
 оборудование|equipment||1|1
-пространстве|space||16|11
+пространстве|space||19|14
 определить|define||1|1
 разбираться|figure it out||1|1
 мурлычет|purrs||1|1
 расслаблены|relaxed||1|1
-обстановке|situation||10|6
+обстановке|situation||11|7
 удастся|will succeed||19|11
 сердцебиение|heartbeat||1|1
 страха|fear||1|1
