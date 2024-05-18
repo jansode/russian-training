@@ -4,7 +4,7 @@
 переменный| alternating||9|8
 корень| root||1|1
 мощность|power||3|3
-увеличится|will increase||33|28
+увеличится|will increase||35|30
 умножить|multiply||1|1
 искра|spark||1|1
 точки зрения|points of view||9|8
@@ -123,7 +123,7 @@
 похожей|similar||1|1
 принимает|accepts||1|1
 прижимается|snuggles||1|1
-прячет|hides||16|13
+прячет|hides||17|14
 незаметнее|more discreetly||1|1
 покачивать|shake||1|1
 тазом|pelvis||1|1
@@ -131,13 +131,13 @@
 кончик|tip||1|1
 загнут|bent||1|1
 друженливые|friendly||1|1
-понюхать|take a smell||16|10
+понюхать|take a smell||17|11
 погладить|stroke,caress||1|1
 трется|rubs||1|1
 положение|position||1|1
 полна сил|full of strength||1|1
 уверенно|confident||1|1
-охотнее|more willingly||13|4
+охотнее|more willingly||14|5
 с опущенными|with lowered||1|1
 соц|social||8|7
 ведет|leads||17|13

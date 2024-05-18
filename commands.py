@@ -11,7 +11,7 @@ def handle_commands(argv):
 		if argv[1] == 'session':	
 			if len(argv) > 2:
 				wordlist_file = argv[2]
-				if file_exists(wordlist_file):
+				if file_exists(settings.WORDLISTFOLDER + '\\' + wordlist_file):
 					settings.WORDLIST_FILE = wordlist_file
 			
 			init_word_list_and_wordlist_file()

@@ -7,7 +7,7 @@ from word_functions import *
 def save_file_exists():
 	if settings.DEBUG_FUNCTION_CALL:
 		print("CALL: save_file_exists")
-	return Path(os.path.dirname(os.path.realpath(__file__)) + '\\' + "savefile_"+settings.WORDLIST_FILE.split('.')[0]+".txt").is_file()
+	return Path(os.path.dirname(os.path.realpath(__file__)) + '\\' + settings.SAVEFOLDER+'\\' + "savefile_"+settings.WORDLIST_FILE.split('.')[0]+".txt").is_file()
 	
 def file_exists(file):
 	if settings.DEBUG_FUNCTION_CALL:
@@ -17,7 +17,7 @@ def file_exists(file):
 def save_words():
 	if settings.DEBUG_FUNCTION_CALL:
 		print("CALL: save_words")
-	with open('savefile_'+settings.WORDLIST_FILE.split(".")[0]+'.txt', 'wb') as f:
+	with open(settings.SAVEFOLDER+'/savefile_'+settings.WORDLIST_FILE.split(".")[0]+'.txt', 'wb') as f:
 		for word in wordlist:
 			to_write = word.in_russian + "|" + ",".join(word.translations) + "|" + word.function + "|" + str(word.times_encountered) + '|' + str(word.times_correct) +"\n"
 			f.write(to_write.encode('utf8'))
@@ -26,7 +26,7 @@ def save_words():
 def load_save_file():
 	if settings.DEBUG_FUNCTION_CALL:
 		print("CALL: load_save_file")
-	with codecs.open('savefile_'+settings.WORDLIST_FILE.split(".")[0]+'.txt','r','utf-8') as f:
+	with codecs.open(settings.SAVEFOLDER+'/savefile_'+settings.WORDLIST_FILE.split(".")[0]+'.txt','r','utf-8') as f:
 		lines = f.readlines()
 
 		for line in lines:
@@ -77,7 +77,7 @@ def sync_save_file_with_new_words():
 		print("CALL: sync_save_file_with_new_words")
 			
 	words = []
-	with codecs.open(settings.WORDLIST_FILE,'r','utf-8') as f:
+	with codecs.open(settings.WORDLISTFOLDER+'\\'+settings.WORDLIST_FILE,'r','utf-8') as f:
 		lines = f.readlines()
 
 		for line in lines:
