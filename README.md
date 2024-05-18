@@ -14,4 +14,6 @@ Run using most common words dictionary:
 ## Installing and running on Linux
 Haven't thought about it yet.
 
+## Demo
+[Here](https://www.youtube.com/watch?v=L-DjP1_QkTE) is a short demo of the program.
 

@@ -111,7 +111,7 @@
 что,"what, which, that",pronoun
 тогда,then,adverb
 ведь,"you see, you know",conj
-хороший,"good, nice (see #152)",adjective
+хороший,"good, nice",adjective
 каждый,"each, every",pronoun
 новый,new; modern,adjective
 жить,to live,verb
@@ -149,7 +149,7 @@
 город,"town, city",noun
 последний,"last, the latest, new",adjective
 пока,for the present,adverb
-хорошо,well (see #114),adverb
+хорошо,well,adverb
 давать,"to give; let, allow",verb
 вода,water,noun
 более,more,adverb
@@ -162,7 +162,7 @@
 ребёнок,"child, kid, infant",noun
 увидеть,to see,verb
 сила,"strength, force",noun
-отец,father (see #918),noun
+отец,father,noun
 женщина,woman,noun
 машина,"car, machine, engine",noun
 случай,"case, occasion, incident",noun
@@ -170,8 +170,8 @@
 сразу,"at once, right away, just",adverb
 мир,"world, peace",noun
 совсем,"quite, entirely, totally",adverb
-остаться,"to remain, stay (see #297)",verb
-об,"about, of (see #34)",preposition
+остаться,"to remain, stay",verb
+об,"about, of",preposition
 вид,"appearance, look, view",noun
 выйти,"to go out, come out, appear",verb
 дать,"to give; masterrussian, dot com",verb
@@ -184,10 +184,10 @@
 начало,"beginning, origin, source",noun
 твой,"your, yours (informal)",pronoun
 вопрос,"question, matter, problem",noun
-много,"many, much (see #799)",adverb
+много,"many, much",adverb
 война,war,noun
 снова,again,adverb
-ответить,"to answer, reply (see #404)",verb
+ответить,"to answer, reply",verb
 между,"between, among",preposition
 подумать,to think,verb
 опять,again,adverb
@@ -250,7 +250,7 @@
 русский,Russian,adjective
 бывать,"be, visit, happen",verb
 полный,"full, complete",adj
-прийти,"to come, arrive (see #464)",verb
+прийти,"to come, arrive",verb
 палец,"finger, toe",noun
 Россия,Russia,noun
 любой,"any, every",pronoun
@@ -276,16 +276,16 @@
 быстро,"fast, quickly",adverb
 лес,forest,noun
 похожий,"similar, alike",adjective
-пора,time; pore (see #1000),noun
+пора,time; pore,noun
 пять,five,cardinal number
 глядеть,"to look,  gaze",verb
 оно,it,pronoun
 сесть,to sit,verb
 имя,name,noun
-ж,"and, as for, but (see #27)",misc
+ж,"and, as for, but",misc
 разговор,"talk, conversation",noun
 тело,body,noun
-молодой,young (see #679); bridegroom (as a noun),adjective
+молодой,young; bridegroom (as a noun),adjective
 стена,wall,noun
 красный,red,adjective
 читать,to read,verb
@@ -294,7 +294,7 @@
 ранний,early,adjective
 хотеться,"want, like",misc (impersonal)
 мама,"mummy, mum",noun
-оставаться,"to remain, stay (see #173)",verb
+оставаться,"to remain, stay",verb
 высокий,"tall, high",adjective
 путь,"way, track, path",noun
 поэтому,therefore,adverb
@@ -306,7 +306,7 @@
 написать,to write,verb
 целый,"intact, whole, entire",adjective
 огромный,"huge, enormous",adjective
-начинать,to begin (see #413),verb
+начинать,to begin,verb
 спина,back,noun
 настоящий,"present;real, true",adjective
 пусть,"let's, though","conj, particle"
@@ -323,19 +323,19 @@
 живой,"living, live, lively",adjective
 смерть,death,noun
 продолжать,to continue,verb
-девушка,"girl, miss (see #524)",noun
+девушка,"girl, miss",noun
 образ,"shape, form, image",noun
-ко,"to, towards, by (see #19)",preposition
+ко,"to, towards, by",preposition
 забыть,to forget,verb
 вокруг,around,preposition
 письмо,letter,noun
 власть,power,noun
-чёрный,black (see #456),adjective
-пройти,"to pass, go by, be over (see #543)",verb
-появиться,"to appear, show up (see #699)",verb
+чёрный,black,adjective
+пройти,"to pass, go by, be over",verb
+появиться,"to appear, show up",verb
 воздух,air,noun
 разный,different,adjective
-выходить,to go out; nurse (see #176),verb
+выходить,to go out; nurse,verb
 просить,to ask,verb
 брат,brother,noun
 собственный,"one's own; masterrussian, dot com",adjective
@@ -352,13 +352,13 @@
 любовь,love,noun
 солдат,soldier,noun
 откуда,where… from,adverb
-чтоб,"that, in order that, (See #74)",misc
-называть,"to call, name, (See #597)",verb
+чтоб,"that, in order that",misc
+называть,"to call, name",verb
 третий,third,ordinal number
 хозяин,"master, boss, host",noun
 вроде,"like, not unlike","preposition, particle"
 уходить,"to leave, go away",verb
-подойти,"to approach, come up(See #798)",verb
+подойти,"to approach, come up",verb
 поднять,"to lift, raise",verb
 особенно,"especially, particularly",adverb
 спрашивать,"to ask, inquire",verb
@@ -381,7 +381,7 @@
 мужчина,"man, male",noun
 равно,"alike, in like manner",adverb
 нос,nose,noun
-мало,"little, few, (See #630)",adverb
+мало,"little, few",adverb
 внимание,attention,noun
 капитан,"captain, master",noun
 ухо,ear,noun
@@ -389,7 +389,7 @@
 сюда,here,adverb
 играть,to play,verb
 следовать,"to follow, come next",verb
-рассказать,"to tell, narrate(See #403)",verb
+рассказать,"to tell, narrate",verb
 великий,great,adjective
 действительно,"indeed, really",adverb
 слишком,"too, too much",adverb
@@ -400,8 +400,8 @@
 длинный,long,adjective
 чувство,feeling,noun
 молчать,to keep silence,verb
-рассказывать,"to tell, narrate, (See #392)",verb
-отвечать,"to answer, reply, (See #190)",verb
+рассказывать,"to tell, narrate",verb
+отвечать,"to answer, reply",verb
 становиться,to stand; to become,verb
 остановиться,to stop,verb
 берег,"bank, shore,  coast",noun
@@ -410,7 +410,7 @@
 генерал,general,noun
 момент,"moment, instant",noun
 десять,ten,cardinal number
-начать,to begin(See #309),verb
+начать,to begin,verb
 следующий,"next, following",adjective
 личный,personal,adjective
 труд,"labour, work",noun
@@ -444,7 +444,7 @@
 простой,"simple, easy, plain",adjective
 приехать,"to arrive, come",verb
 иной,"different, other",pronoun
-кричать,"to cry, shout(See #656)",verb
+кричать,"to cry, shout",verb
 возможность,"possibility, opportunity, chance",noun
 общество,society,noun
 зеленый,green,adjective
@@ -453,15 +453,15 @@
 открыть,to open,verb
 происходить,"to happen, occur, take place",verb
 ладно,"in harmony, well, all right",adverb
-черный,"black (as in ""she wears black"")(See #333)",noun
+черный,"black (as in ""she wears black"")",noun
 век,"century, age",noun
 карман,pocket,noun
 ехать,"to go, ride, drive, travel",verb of motion
 немец,German,noun
-наверное,"probably, most likely(See #972)",adverb
+наверное,"probably, most likely",adverb
 губа,lip,noun
 дядя,uncle,noun
-приходить,"to come, arrive(See #253)",verb
+приходить,"to come, arrive",verb
 часто,often,adverb
 домой,"home(as in ""she came home"")",adverb
 огонь,fire,noun
@@ -476,9 +476,9 @@
 гость,guest,noun
 показаться,"to appear, come in sight",verb
 ветер,wind,noun
-собираться,"to gather together, assemble; intend(See #981)",verb
+собираться,"to gather together, assemble; intend",verb
 попасть,to hit; to find oneself,verb
-принять,"to take, admit, accept(See #643)",verb
+принять,"to take, admit, accept",verb
 сначала,"at first, from the beginning",adverb
 либо,or,conjunction
 поехать,"to depart, set off",verb
@@ -521,7 +521,7 @@
 положить,"to lay down, put down, place",verb
 едва,"hardly, just, barely",adverb
 черта,"line, boundary; trait",noun
-девочка,"girl, little girl(See #326)",noun
+девочка,"girl, little girl",noun
 лёгкий,"light, easy",adjective
 волос,hair,noun
 купить,"to buy, purchase",verb
@@ -540,7 +540,7 @@
 партия,party,noun
 проблема,"problem, issue",noun
 страх,fear,noun
-проходить,"to pass, go;study(See #334)",verb
+проходить,"to pass, go;study",verb
 ясно,"clear, clearly",adverb
 снять,"to take away, take off;photograph",verb
 бумага,paper,noun
@@ -555,7 +555,7 @@
 связь,"tie, bond; connection, relation",noun
 скоро,"quickly, fast, soon",adverb
 небольшой,"small, not great",adjective
-представлять,"to present, introduce, imagine(See #586)",verb
+представлять,"to present, introduce, imagine",verb
 завтра,tomorrow,adverb
 объяснить,to explain,verb
 пустой,"empty, hollow; idle",adjective
@@ -573,7 +573,7 @@
 сквозь,through,preposition
 прийтись,"to fit, fall; have to",verb
 чистый,"clean, pure",adjective
-знать,to know(See #51),noun
+знать,to know,noun
 прежний,former,adjective
 профессор,professor,noun
 господин,"gentleman, Mr.",noun
@@ -583,7 +583,7 @@
 план,plan,noun
 чужой,"somebody else's;strange, foreign",adjective
 зал,hall,noun
-представить,"to presetn, produce, introduce(See #558)",verb
+представить,"to presetn, produce, introduce",verb
 особый,special,adjective
 директор,"director, manager",noun
 бывший,"former, ex-",adjective
@@ -594,15 +594,15 @@
 больной,sick,adjective
 данный,"given, present",adjective
 кстати,"to the point, at the same time",adverb
-назвать,"to call, name(See #356)",verb
+назвать,"to call, name",verb
 след,"track, footprint",noun
-улыбаться,to smile(See #605),verb
+улыбаться,to smile,verb
 бутылка,bottle,noun
 трудно,with difficulty,adverb
 условие,"condition, term",noun
 прежде,before,preposition
 ум,"mind, brains, intellect",noun
-улыбнуться,to smile(See #599),verb
+улыбнуться,to smile,verb
 процесс,process,noun
 картина,"picture, painting",noun
 вместо,instead,preposition
@@ -615,7 +615,7 @@
 смеяться,to laugh,verb
 сто,hundred,cardinal numberinal number
 будущее,future,noun
-хватать,"to snatch, seize; be sufficient(See #636)",verb
+хватать,"to snatch, seize; be sufficient",verb
 число,number,noun
 всякое,"any, every",pronoun
 рубль,ruble,noun
