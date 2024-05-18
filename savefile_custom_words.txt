@@ -1,62 +1,62 @@
 по этому случаю| on this occasion||5|5
-источник| source||2|1
-частота| frequency||4|3
-переменный| alternating||6|5
+источник| source||9|8
+частота| frequency||8|7
+переменный| alternating||8|7
 корень| root||1|1
 мощность|power||3|3
-увеличится|will increase||4|1
+увеличится|will increase||13|10
 умножить|multiply||1|1
 искра|spark||1|1
-точки зрения|points of view||6|5
+точки зрения|points of view||8|7
 расширенные|extended||1|1
 сужение|narrowing||1|1
-зрачки|pupils||11|9
+зрачки|pupils||14|12
 охота|hunting||1|1
 удовлетворить|to satisfy||1|1
-предмет|item,subject||5|4
+предмет|item,subject||8|7
 сузится|will narrow||1|1
 добыча|production||1|1
 позволяет|allows,enables||1|1
-испытовает|is experiencing||14|11
-усы|whisker||6|5
-помешивать|stir||5|2
-жидкость|liquid||5|4
-стекло|glass||11|8
-чистый|clean||6|5
+испытовает|is experiencing||20|17
+усы|whisker||7|6
+помешивать|stir||10|7
+жидкость|liquid||8|7
+стекло|glass||19|16
+чистый|clean||8|7
 муравей|ant||1|1
 смесь|mixture||1|1
 среда обитания|habitat||2|2
-поверхность|surface||5|4
+поверхность|surface||8|7
 заблудиться|get lost||1|1
 отрасли|industry||1|1
 напряжение|voltage||1|1
 примерно|approximately||1|1
-питание|powered||5|4
+питание|powered||8|7
 передача|transmitting||1|1
 провода|wires||3|3
-сопротивление|resistance||6|5
-разделенный|divided||8|6
+сопротивление|resistance||8|7
+разделенный|divided||13|11
 маятник|pendulum||6|6
 основной|main||1|1
-достигает|reaches||3|2
-взволнованный|excited||5|4
-зубы|teeth||10|8
+достигает|reaches||8|7
+взволнованный|excited||8|7
+зубы|teeth||14|12
 зуб|tooth||2|2
 дыхание|breath||1|1
-справедливый|fair, just||5|4
+справедливый|fair, just||8|7
 трогать|touch||1|1
 тайна|secret||5|5
 старушка|old lady||1|1
 вредны|harmful||3|3
 неожиданный|unexpected,sudden||1|1
 выпятив|sticking out||1|1
-упрямо|stubbornly||5|4
-появляться|appear||10|6
+упрямо|stubbornly||8|7
+появляться|appear||17|13
 брать|take||1|1
-берем|take||6|5
-иголки|needles||5|3
-молитва|prayer||14|11
-весьма|very||4|3
+берем|take||8|7
+иголки|needles||11|9
+молитва|prayer||22|18
+весьма|very||7|6
 взгляд|sight, view||3|3
 грибы|mushrooms||1|1
 удовольствием|pleasure||6|6
@@ -79,3 +79,14 @@
 разбираюсь|I am figuring it out||2|2
 кусочек|a piece||3|3
 подожди|wait||1|1
+как будто|as if||1|1
+кривой|crooked||1|1
+побережде|coast||1|1
+наверху|upstairs||1|1
+крах|collapse,crash||1|1
+хватит|enough||1|1
+все-таки|after all,still||1|1
+судить|judge||1|1
+столбики|columns||1|1
+дойду|I will get there||1|1
+обмануть|deceive||7|6

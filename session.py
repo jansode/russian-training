@@ -103,7 +103,7 @@ def session():
 		if guess_word_correct or (int(guess) == correct_index):
 			word.times_correct += 1
 		
-			success_rate = str(float(word.times_correct / word.times_encountered))
+			success_rate = str(round(float(word.times_correct / word.times_encountered),2))
 			if word.times_encountered == 0:
 				success_rate = 0
 				
