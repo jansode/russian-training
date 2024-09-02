@@ -73,7 +73,8 @@ def quiz_word(nr_suggestions):
 	if settings.DEBUG_FUNCTION_CALL:
 		print("CALL: quiz_word")
 
-	candidates = sorted(wordlist, key=lambda x:x.get_correct_rate())[:int(len(wordlist)/6)]
+	choice_index = random.randint(0,6)
+	candidates = sorted(wordlist, key=lambda x:x.get_correct_rate())[:choice_index+1]
 	translate_this = choice(candidates)
 
 	copy_set = english_word_set.copy()
