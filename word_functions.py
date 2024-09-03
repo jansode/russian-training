@@ -83,7 +83,6 @@ def quiz_word(nr_suggestions):
 
 	false_words = random.sample(list(copy_set),nr_suggestions-1)
 	
-	# It would be cool to see an infinite loop here. 
 	i = 0
 	while True:
 		if translate_this.translations[i].lstrip() not in false_words:

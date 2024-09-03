@@ -40,7 +40,8 @@ def load_save_file():
 def create_save_file():
 	if settings.DEBUG_FUNCTION_CALL:
 		print("CALL: create_save_file")
-	with codecs.open(settings.WORDLIST_FILE,'r','utf-8') as f:
+		
+	with codecs.open(settings.WORDLISTFOLDER + '\\' + settings.WORDLIST_FILE,'r','utf-8') as f:
 		lines = f.readlines()
 
 		for line in lines:
@@ -83,11 +84,11 @@ def sync_save_file_with_new_words():
 		for line in lines:
 			split_line = custom_split(line,',','"')
 			if len(split_line) > 1:
-				english_words = split_line[1].replace('\n','').split(",")
+				english_words = split_line[1].replace('\n','').replace('\r','').replace('\t','').split(",")
 				
 				word_function = ""
 				if len(split_line) == 3:
-					word_function = split_line[2].replace('\n','')
+					word_function = split_line[2].replace('\n','').replace('\r','').replace('\t','')
 				
 				words.append(Word(split_line[0],english_words,word_function))
 	
