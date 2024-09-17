@@ -16,7 +16,6 @@ def get_context_for_word(word):
 			content = content.find('span', class_="ru")
 			content = content.find_all('a')
 			
-			# TODO: Here is some problem with removing whitespaces after accented letters from the words. Otherwise it should be fine.
 			sentence = ""
 			for link in content:
 				sentence += link.get_text().replace(" ","")
