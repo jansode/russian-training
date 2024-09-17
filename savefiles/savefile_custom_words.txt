@@ -1,36 +1,36 @@
-по этому случаю|on this occasion||0|0
+по этому случаю|on this occasion||1|1
 источник|source||1|1
 частота|frequency||1|1
-переменный|alternating||0|0
-корень|root||0|0
-мощность|power||0|0
-увеличится|will increase||0|0
-умножить|multiply||0|0
-искра|spark||0|0
-точки зрения|points of view||0|0
-расширенные|extended||0|0
-сужение|narrowing||0|0
-зрачки|pupils||0|0
-охота|hunting||0|0
-удовлетворить|to satisfy||0|0
-предмет|item,subject||0|0
-сузится|will narrow||0|0
-добыча|production||0|0
-позволяет|allows,enables||0|0
-испытовает|is experiencing||0|0
-усы|whisker||0|0
-помешивать|stir||0|0
-жидкость|liquid||0|0
-стекло|glass||0|0
-чистый|clean||0|0
-муравей|ant||0|0
-смесь|mixture||0|0
-среда обитания|habitat||0|0
-поверхность|surface||0|0
-заблудиться|get lost||0|0
-отрасли|industry||0|0
-напряжение|voltage||0|0
-примерно|approximately||0|0
+переменный|alternating||2|1
+корень|root||2|1
+мощность|power||1|1
+увеличится|will increase||1|1
+умножить|multiply||1|1
+искра|spark||1|1
+точки зрения|points of view||1|1
+расширенные|extended||1|1
+сужение|narrowing||1|1
+зрачки|pupils||1|1
+охота|hunting||1|1
+удовлетворить|to satisfy||1|1
+предмет|item,subject||1|1
+сузится|will narrow||1|1
+добыча|production||1|1
+позволяет|allows,enables||1|1
+испытовает|is experiencing||1|1
+усы|whisker||1|1
+помешивать|stir||1|1
+жидкость|liquid||1|1
+стекло|glass||1|1
+чистый|clean||1|1
+муравей|ant||1|1
+смесь|mixture||1|1
+среда обитания|habitat||1|1
+поверхность|surface||1|1
+заблудиться|get lost||1|1
+отрасли|industry||1|1
+напряжение|voltage||1|1
+примерно|approximately||1|1
 питание|powered||0|0
 передача|transmitting||0|0
 провода|wires||0|0

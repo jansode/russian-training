@@ -2,6 +2,7 @@ import settings
 import random
 import re
 import string
+import word_context_scraper
 from termcolor import colored
 
 from translate import Translator
@@ -91,7 +92,14 @@ def quiz_word(nr_suggestions):
 		i+=1
 	
 	random.shuffle(false_words)
+	
+	context = ""
+	if settings.DOWNLOAD_WORD_CONTEXT:
+		context = word_context_scraper.get_context_for_word(translate_this.in_russian)
+	
 	print(colored("translate:",settings.MISC_COLOR)+colored(translate_this.in_russian,settings.QUIZ_WORD_COLOR))
+	if context != "":
+		print(colored("context: ",settings.MISC_COLOR)+colored(context,settings.QUIZ_WORD_COLOR))
 	print(colored("suggestions:",settings.MISC_COLOR), end='')
 	
 	index = 1
