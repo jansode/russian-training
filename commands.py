@@ -14,6 +14,8 @@ def handle_commands(argv):
 				if file_exists(settings.WORDLISTFOLDER + '\\' + wordlist_file):
 					settings.WORDLIST_FILE = wordlist_file
 			
+				
+			check_wordlist_errors()
 			init_word_list_and_wordlist_file()
 			save_words()
 

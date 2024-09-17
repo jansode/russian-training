@@ -14,6 +14,7 @@ import queue
 import os
 import platform
 import webbrowser
+import errors
 
 music_list = settings.MUSIC_LIST
 curr_level = 0
@@ -200,6 +201,7 @@ def session():
 		print("CALL: session")
 	
 	global music_list, curr_level, curr_points, curr_combo, next_level_threshold
+
 	
 	pygame.init()
 

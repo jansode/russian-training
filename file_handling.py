@@ -1,8 +1,25 @@
 import os
 import settings
 import codecs
+import errors
 from pathlib import Path
 from word_functions import *
+
+# If the wordlist file has wrong formatting exits and displays error.
+def check_wordlist_errors():
+	with codecs.open(settings.WORDLISTFOLDER+'\\'+settings.WORDLIST_FILE,'r','utf-8') as f:
+		lines = f.readlines()
+
+		for i,line in enumerate(lines):
+			splitline = custom_split(line,',','"')
+				
+			if len(splitline) < 2 or len(splitline) > 3:
+				msg = "Line " + str(i+1) + " is malformed. Each row needs to be of the format - [russian expression], \"[english translations]\"[, word function (optional)]"
+				errors.display_error_and_exit(errors.ERROR_WORDLIST_FORMATTING,msg)
+				
+			if splitline[-1].strip() == '':
+				msg = "Line " + str(i+1) + " is malformed. Remove the trailing comma. Each row needs to be of the format - [russian expression], \"[english translations]\"[, word function (optional)]"
+				errors.display_error_and_exit(errors.ERROR_WORDLIST_FORMATTING,msg)
 
 def save_file_exists():
 	if settings.DEBUG_FUNCTION_CALL:
@@ -35,6 +52,7 @@ def load_save_file():
 				english_words = split_line[1].split(",")
 				for word in english_words:
 					english_word_set.add(word.strip())
+					
 				wordlist.append(Word(split_line[0],english_words,split_line[2],int(split_line[3]), int(split_line[4])))
 
 def create_save_file():
