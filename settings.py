@@ -23,6 +23,7 @@ CORRECT_COLOR = "light_green"
 WRONG_COLOR = "red"
 MISC_COLOR = "light_blue"
 MISC_COLOR2 = "light_red"
+WHITE_COLOR = "white"
 
 MAX_MUSIC_LEVEL = 10
 POINTS_TO_LEVEL_UP = 400

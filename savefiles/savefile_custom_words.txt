@@ -1,8 +1,8 @@
 по этому случаю|on this occasion||1|1
 источник|source||1|1
 частота|frequency||1|1
-переменный|alternating||2|1
-корень|root||2|1
+переменный|alternating||1|1
+корень|root||1|1
 мощность|power||1|1
 увеличится|will increase||1|1
 умножить|multiply||1|1
@@ -24,65 +24,65 @@
 стекло|glass||1|1
 чистый|clean||1|1
 муравей|ant||1|1
-смесь|mixture||1|1
+смесь|mixture||0|0
 среда обитания|habitat||1|1
 поверхность|surface||1|1
 заблудиться|get lost||1|1
-отрасли|industry||1|1
+отрасли|industry||2|0
 напряжение|voltage||1|1
 примерно|approximately||1|1
 питание|powered||1|1
-передача|transmitting||1|1
-провода|wires||1|1
-сопротивление|resistance||1|1
-разделенный|divided||1|1
+передача|transmitting||0|0
+провода|wires||0|0
+сопротивление|resistance||0|0
+разделенный|divided||0|0
 маятник|pendulum||1|1
-основной|main||1|1
-достигает|reaches||1|1
-взволнованный|excited||2|1
-зубы|teeth||1|1
-зуб|tooth||1|1
-дыхание|breath||1|1
-справедливый|fair,just||1|1
-трогать|touch||1|1
-тайна|secret||1|1
-старушка|old lady||1|1
-вредны|harmful||1|1
-неожиданный|unexpected,sudden||1|1
-выпятив|sticking out||1|1
-упрямо|stubbornly||2|1
-появляться|appear||1|1
-брать|take||1|1
-берем|take||1|1
-иголки|needles||1|1
-молитва|prayer||1|1
-весьма|very||1|1
-взгляд|sight,view||1|1
-грибы|mushrooms||1|1
-удовольствием|pleasure||1|1
-очередь|queue||1|1
-стрелка|arrow||1|1
-заросшая|overgrown||1|1
-следом|next||1|1
-очевидно|obviously||2|1
-куча|a bunch,heap,pile,stack||2|1
-сзади|behind||1|1
-жесть просто|it is just tough||1|1
-грузовник|truck||2|1
-ломается|breaks down||1|1
-тупой|blunt,stupid,dull,dumb||1|1
-некие|some||3|1
-расметку|marking||3|1
-смущать|embarrass||1|1
+основной|main||0|0
+достигает|reaches||0|0
+взволнованный|excited||0|0
+зубы|teeth||0|0
+зуб|tooth||0|0
+дыхание|breath||0|0
+справедливый|fair,just||0|0
+трогать|touch||0|0
+тайна|secret||0|0
+старушка|old lady||0|0
+вредны|harmful||0|0
+неожиданный|unexpected,sudden||0|0
+выпятив|sticking out||0|0
+упрямо|stubbornly||0|0
+появляться|appear||0|0
+брать|take||0|0
+берем|take||0|0
+иголки|needles||0|0
+молитва|prayer||0|0
+весьма|very||0|0
+взгляд|sight,view||0|0
+грибы|mushrooms||0|0
+удовольствием|pleasure||0|0
+очередь|queue||0|0
+стрелка|arrow||0|0
+заросшая|overgrown||0|0
+следом|next||0|0
+очевидно|obviously||0|0
+куча|a bunch,heap,pile,stack||0|0
+сзади|behind||0|0
+жесть просто|it is just tough||0|0
+грузовник|truck||0|0
+ломается|breaks down||0|0
+тупой|blunt,stupid,dull,dumb||0|0
+некие|some||0|0
+расметку|marking||0|0
+смущать|embarrass||0|0
 зрители|spectators||0|0
-угадал|guessed right||1|0
-разбираюсь|I am figuring it out||2|1
-кусочек|a piece||1|1
-подожди|wait||1|1
+угадал|guessed right||0|0
+разбираюсь|I am figuring it out||0|0
+кусочек|a piece||0|0
+подожди|wait||0|0
 как будто|as if||0|0
-кривой|crooked||1|1
-побережде|coast||1|0
-наверху|upstairs||1|1
+кривой|crooked||0|0
+побережде|coast||0|0
+наверху|upstairs||0|0
 крах|collapse,crash||0|0
 хватит|enough||0|0
 все-таки|after all,still||0|0
@@ -272,7 +272,7 @@
 терпеть|suffer||0|0
 жуткая|creepy||0|0
 недоумение|bewilderment||0|0
-подожди|wait||1|0
+подожди|wait||0|0
 чудо|miracle||0|0
 объявление|ad||0|0
 владение|ownership||0|0
@@ -304,3 +304,95 @@
 рынке|market||0|0
 ограждение|fencing||0|0
 счет|score,bill||0|0
+враг|enemy||0|0
+уважать|respect||0|0
+лечение|treatment||0|0
+излечивать|heal||0|0
+волновать|worry||0|0
+покорить|conquer||0|0
+в итоге|in the end||0|0
+потягиваться|stretch||0|0
+печень|liver||0|0
+ухожу|I'm leaving||0|0
+тень|shadow||0|0
+собственное|own||0|0
+плакать|cry||0|0
+кукуруза|corn||0|0
+появилась|appeared||0|0
+оскорбление|insult||0|0
+сопку|hills||0|0
+покрыты|covered||0|0
+могилы|graves||0|0
+жертвах|victims||0|0
+твердят|they say||0|0
+унёс|carried away||0|0
+рок|fate||0|0
+судьба|destiny||0|0
+кляня|cursing||0|0
+вызвало|caused||0|0
+исчезать|disappear||0|0
+постепенно|gradually||0|0
+удаляющимся|receding||0|0
+словно|as if||0|0
+выпуклый|convex||0|0
+вогнутый|concave||0|0
+отважится|dare||0|0
+жалко|it's a pity||0|0
+чемодан|suitcase||0|0
+склад|warehouse||0|0
+распознавать|recognize||0|0
+дневник|diary||0|0
+прелесть|lovely,beauty||0|0
+грёзами|dreams||0|0
+наяву|in ones waking hours||0|0
+стремление|pursuit||0|0
+совесть|conscience||0|0
+попал|got there||0|0
+подстроиться|adjust||0|0
+изобретения|inventions||0|0
+приходилось|had to||0|0
+повсюду|everywhere||0|0
+распространяться|spread||0|0
+особь|individual||0|0
+потепления|warming||0|0
+кривая|curve||0|0
+неоднократно|repeatedly||0|0
+гребень|comb||0|0
+крывать|to nod||0|0
+рокот|rumble||0|0
+рев|roar||0|0
+появилась|appeared||0|0
+ведьма|witch||0|0
+не сдавайся|don't give up||0|0
+учреждении|institution||0|0
+якобы|allegedly||0|0
+ведомстве|department||0|0
+пересечь|cross||0|0
+роскошь|luxury||0|0
+противоречивый|contradictory||0|0
+остатки|leftovers||0|0
+расчёт|calculation||0|0
+пояс|belt||0|0
+оттого|that is why||0|0
+глянуть|take a look||0|0
+изба|cottage||0|0
+мгновенно|instantly||0|0
+прикрыть|cover||0|0
+расстраивает|upsetting||0|0
+потерять|lose||0|0
+действует|it works||0|0
+повсюду|everywhere||0|0
+править|edit||0|0
+не волнуйся|don't worry||0|0
+выстраиваются|are lining up||0|0
+наглядности|clarity||0|0
+закономерность|regularity||0|0
+вывод|conclusion||0|0
+расставлены|arranged||0|0
+струна|string||0|0
+хитрая|cunning||0|0
+масштаб|scale||0|0
+упал|fell||0|0
+толчок|push||0|0
+совершить|to commit||0|0
+плоска|flat||0|0

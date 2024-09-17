@@ -32,6 +32,7 @@ def print_help():
 	print("clear: Clears the screen.")
 	print("music (on/off): Toggle music")
 	print("effects (on/off): Toggle sound effects")
+	print("flag: Draws the russian flag.")
 	print("help: Shows this text")
 	print("")
 
@@ -49,7 +50,16 @@ def set_music(on_or_off):
 	elif on_or_off == "OFF":
 		settings.MUSIC_ON = False
 		pygame.mixer.music.stop()
-	
+
+def draw_flag():
+	print(colored("###################",settings.WHITE_COLOR))
+	print(colored("###################",settings.WHITE_COLOR))
+	print(colored("###################",settings.MISC_COLOR))
+	print(colored("###################",settings.MISC_COLOR))
+	print(colored("###################",settings.WRONG_COLOR))
+	print(colored("###################",settings.WRONG_COLOR))
+
+		
 # returns a tuple of booleans. (right answer check after this function?,get new question after?)
 def handle_commands(command_string):
 	if settings.DEBUG_FUNCTION_CALL:
@@ -66,6 +76,10 @@ def handle_commands(command_string):
 	elif command_string == "problem_words":
 		list_problem_words()
 		return (False,True)
+		
+	elif command_string == "flag":
+		draw_flag()
+		return (False,False)
 	elif command_string == "clear":	
 		my_os = platform.system()
 		if my_os == 'Linux':
