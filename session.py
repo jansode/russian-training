@@ -15,6 +15,9 @@ import os
 import platform
 import webbrowser
 import errors
+import time
+import random
+import tetris
 
 music_list = settings.MUSIC_LIST
 curr_level = 0
@@ -32,6 +35,7 @@ def print_help():
 	print("clear: Clears the screen.")
 	print("music (on/off): Toggle music")
 	print("effects (on/off): Toggle sound effects")
+	print("tetris: Starts a game of tetris.")
 	print("flag: Draws the russian flag.")
 	print("help: Shows this text")
 	print("")
@@ -79,6 +83,9 @@ def handle_commands(command_string):
 		
 	elif command_string == "flag":
 		draw_flag()
+		return (False,False)
+	elif command_string == "tetris":
+		tetris.start_tetris()
 		return (False,False)
 	elif command_string == "clear":	
 		my_os = platform.system()

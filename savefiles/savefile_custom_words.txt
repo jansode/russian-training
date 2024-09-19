@@ -24,66 +24,66 @@
 стекло|glass||1|1
 чистый|clean||1|1
 муравей|ant||1|1
-смесь|mixture||0|0
+смесь|mixture||1|1
 среда обитания|habitat||1|1
 поверхность|surface||1|1
 заблудиться|get lost||1|1
-отрасли|industry||2|0
+отрасли|industry||3|1
 напряжение|voltage||1|1
 примерно|approximately||1|1
 питание|powered||1|1
-передача|transmitting||0|0
-провода|wires||0|0
-сопротивление|resistance||0|0
-разделенный|divided||0|0
+передача|transmitting||1|1
+провода|wires||1|1
+сопротивление|resistance||1|1
+разделенный|divided||1|1
 маятник|pendulum||1|1
-основной|main||0|0
-достигает|reaches||0|0
-взволнованный|excited||0|0
-зубы|teeth||0|0
-зуб|tooth||0|0
-дыхание|breath||0|0
-справедливый|fair,just||0|0
-трогать|touch||0|0
-тайна|secret||0|0
-старушка|old lady||0|0
-вредны|harmful||0|0
-неожиданный|unexpected,sudden||0|0
-выпятив|sticking out||0|0
-упрямо|stubbornly||0|0
-появляться|appear||0|0
-брать|take||0|0
-берем|take||0|0
-иголки|needles||0|0
-молитва|prayer||0|0
-весьма|very||0|0
-взгляд|sight,view||0|0
-грибы|mushrooms||0|0
-удовольствием|pleasure||0|0
-очередь|queue||0|0
-стрелка|arrow||0|0
-заросшая|overgrown||0|0
-следом|next||0|0
-очевидно|obviously||0|0
-куча|a bunch,heap,pile,stack||0|0
-сзади|behind||0|0
-жесть просто|it is just tough||0|0
-грузовник|truck||0|0
-ломается|breaks down||0|0
-тупой|blunt,stupid,dull,dumb||0|0
-некие|some||0|0
-расметку|marking||0|0
-смущать|embarrass||0|0
-зрители|spectators||0|0
-угадал|guessed right||0|0
-разбираюсь|I am figuring it out||0|0
-кусочек|a piece||0|0
-подожди|wait||0|0
-как будто|as if||0|0
-кривой|crooked||0|0
-побережде|coast||0|0
-наверху|upstairs||0|0
-крах|collapse,crash||0|0
+основной|main||1|1
+достигает|reaches||1|1
+взволнованный|excited||1|1
+зубы|teeth||1|1
+зуб|tooth||1|1
+дыхание|breath||1|1
+справедливый|fair,just||1|1
+трогать|touch||1|1
+тайна|secret||1|1
+старушка|old lady||1|1
+вредны|harmful||1|1
+неожиданный|unexpected,sudden||1|1
+выпятив|sticking out||1|1
+упрямо|stubbornly||1|1
+появляться|appear||1|1
+брать|take||1|1
+берем|take||1|1
+иголки|needles||1|1
+молитва|prayer||1|1
+весьма|very||2|1
+взгляд|sight,view||1|1
+грибы|mushrooms||1|1
+удовольствием|pleasure||1|1
+очередь|queue||1|1
+стрелка|arrow||1|1
+заросшая|overgrown||3|1
+следом|next||1|1
+очевидно|obviously||1|1
+куча|a bunch,heap,pile,stack||1|1
+сзади|behind||1|1
+жесть просто|it is just tough||1|1
+грузовник|truck||1|1
+ломается|breaks down||2|1
+тупой|blunt,stupid,dull,dumb||1|1
+некие|some||1|1
+расметку|marking||1|1
+смущать|embarrass||1|1
+зрители|spectators||1|1
+угадал|guessed right||1|1
+разбираюсь|I am figuring it out||2|1
+кусочек|a piece||1|0
+подожди|wait||1|1
+как будто|as if||1|1
+кривой|crooked||1|1
+побережде|coast||1|1
+наверху|upstairs||1|1
+крах|collapse,crash||2|1
 хватит|enough||0|0
 все-таки|after all,still||0|0
 судить|judge||0|0
@@ -272,7 +272,7 @@
 терпеть|suffer||0|0
 жуткая|creepy||0|0
 недоумение|bewilderment||0|0
-подожди|wait||0|0
+подожди|wait||1|0
 чудо|miracle||0|0
 объявление|ad||0|0
 владение|ownership||0|0
